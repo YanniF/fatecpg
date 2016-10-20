@@ -1,0 +1,120 @@
+@media screen and (max-width: 768px) {
+	body {
+		> header {	
+			> .content {
+				.logoFatec {
+					margin-left: 15%;
+					margin-right: 15%;
+					width: 70%;
+				}
+
+				.logoCPS {
+					display: none;
+				}
+
+				.logoGoverno {
+					display: none;
+				}
+			}
+		}
+
+		> #navegacao {
+			> .container {
+				> .content {
+					> #navegacao__content {
+						padding: 0;
+
+						.navbar {
+							.navbar-collapse {
+								padding-left: 15px;
+
+								> ul.navbar-nav {
+									> li {
+
+										&.active {
+											a {
+												border: none;												
+											}
+										}
+
+										a {
+											font-size: 14px;
+
+											&:hover {
+												border: none;
+											}										
+										}
+
+										> ul.dropdown-menu {
+											> li {
+												a {
+													font-size: 12px;
+													padding-left: 20px;
+												}
+											}
+										}
+									}
+								}//ul.navbar-nav
+							}//navbar-collapse
+						}//navbar
+					}//navegacao__content
+				}//content
+			}//container
+		}//navegacao
+
+		#cursos {							
+			margin-top: 10px;
+
+			> .content {				
+				> h2 {
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+			}
+
+			#cursos__itens {
+				margin-bottom: 20px;
+				.cursos__item {
+					a {
+						img {
+							margin-top: 0;
+						}
+					}
+				}
+			}//cursos__itens			
+		}
+
+		footer {
+			> .container {
+				>.content {
+
+					> .endereco {
+						font-size: 12px;
+					}
+				}
+			}
+		}//footer
+
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	body {
+		footer {
+			> .container {
+				>.content {
+
+					> .redes_sociais {
+						a {
+							img {
+								width: 50%;
+								height: auto;
+							}
+						}
+					}
+				}//content
+			}//container
+		}//footer
+	}
+}

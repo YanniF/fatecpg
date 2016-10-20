@@ -1,0 +1,197 @@
+body {
+	> header {
+		padding: 15px 0;
+
+		> .content {			
+			margin-left: 0;
+			margin-right: 0;			
+			margin-top: 5px;
+			
+			height: 80px;
+
+			.logoFatec {
+				@include make-xs-column(12);
+				@include make-sm-column(4);
+				@include make-md-column(4);
+				padding: 0;
+			}
+
+			.logoCPS {
+				@include make-xs-column(0);
+				@include make-sm-column(3);
+				@include make-md-column(4);
+				
+				a {
+					> img {					
+						padding-left: 20px; 
+					}	
+				}				
+			}
+
+			.logoGoverno {
+				@include make-xs-column(0);
+				@include make-sm-column(5);
+				@include make-md-column(4);
+				padding-right: 0;
+
+				> a {
+					> img {					
+						padding: 5px 0 0 25px;
+					}	
+				}
+			}
+		}
+	}
+
+	#navegacao {
+		background-color: $menu_claro;
+		width: 100%;
+
+		> .container {
+			.content {
+				margin-left: 0;
+				margin-right: 0;
+
+				#navegacao__content {
+					@include make-md-column(12);
+					padding: 0;
+
+					.navbar {
+						border-radius: 0;
+						border: none;
+						background-color: $menu_claro;
+						margin-bottom: 0;
+						
+						.navbar-toggle {
+							border-color:#FFFFFF;
+
+							&:hover, &:focus {
+								background-color: $menu_escuro;
+							}
+
+							.icon-bar {
+								background-color:#FFFFFF;
+							}
+						}
+
+						.navbar-collapse {
+							border: none;
+							padding-top: 2px;
+							padding-left: 0;
+							
+							> ul.navbar-nav {
+
+								> li {								
+									background-color: $menu_claro;
+								    box-shadow: 0 0 0 2px $menu_claro;	
+
+									&.active{																	
+										> a {										
+											background-color: $menu_escuro;		
+											box-shadow: 0 0 0 2px $menu_escuro;
+									    	border-bottom: 3px solid #FFFFFF;
+									    	height: 46px;	
+									    	z-index: 999;						
+										}									
+									}
+
+									a {
+										outline: none;
+										color: #FFFFFF;	
+										font: 400 16px $fonte_principal;
+										height: 46px;	
+										background-color: $menu_claro;
+										transition: all 0.3s linear; 
+
+										&:hover {
+											background-color: $menu_escuro;
+										    box-shadow: 0 0 0 2px $menu_escuro;
+										    border-bottom: 3px solid #FFFFFF;
+										    z-index: 999;
+										    transition: all 0.2s linear;
+										}
+
+										img {
+											padding-left: 5px;
+										}
+									}
+
+									> ul.dropdown-menu {
+										box-shadow: none;	
+										border-radius: 0;
+										border: none;
+										background-color: $menu_claro;
+										padding: 0 2px;
+
+										> li {
+											background-color: $menu_claro;											
+											margin-top: 3px;
+
+											> a {
+												border: none;
+												padding-top: 15px;
+												font: 14px $fonte_principal;
+											}
+										}
+									}
+								}//li
+							}//ul.navbar-nav
+						}//navbar-collapse
+					}//navbar
+				}//navegacao__content		
+			}//content				
+		}//container		
+	}//navgeção
+
+	> .modal {
+		> .modal-dialog {
+			> .modal-content {
+				> .modal-header {
+					font: 600 16px $fonte_principal;
+					text-align: center;
+				}
+
+				> .modal-body {
+					> .form-horizontal {
+						> .form-group {
+							.control-label {
+								@include make-xs-column(3);
+								@include make-sm-column(3);
+								@include make-md-column(3);
+
+								font: 600 14px $fonte_principal;
+							}
+							.inputs {
+								@include make-xs-column(9);
+								@include make-sm-column(9);
+								@include make-md-column(9);
+
+								font: 400 14px $fonte_principal;
+							}
+							.check {
+								@include make-xs-column(12);
+								@include make-sm-column(12);
+								@include make-md-column(12);
+
+								font: 600 14px $fonte_principal;
+							}
+
+							.botao {
+								@include make-xs-column(12);
+								@include make-sm-column(12);
+								@include make-md-column(12);
+
+								.btn {																		
+									background-color: $menu_claro;
+									border: none;
+									font: 600 16px $fonte_principal;
+									color: #fff;
+								}								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

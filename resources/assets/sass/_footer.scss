@@ -1,0 +1,111 @@
+body {
+	> footer {
+		background-color: $menu_escuro;		
+		
+		> .container {
+			> .content {
+				margin-top: 25px;
+				margin-bottom: 25px;					
+
+				> .redes_sociais {
+					@include make-xs-column(4);
+					@include make-sm-column(3);
+					@include make-md-column(2);
+
+					padding: 0;
+
+					> a {
+						img {
+							float: left;
+							display: inline;
+						}						
+					}					
+				}
+
+				> .endereco {
+					@include make-xs-column(8);
+					@include make-sm-column(9);
+					@include make-md-column(4);
+					@include make-md-column-offset(6);
+
+					font: 300 14px $fonte_principal;
+					color: #FFFFFF;
+					text-align: center;
+				}
+			}//content
+
+			#mapa {
+				//margin-bottom: 25px;
+
+				#mapa_cursos {
+					@include make-xs-column(12);
+					@include make-sm-column(3);
+					@include make-md-column(3);
+				}
+
+				.mapa_dar_nome {
+					@include make-xs-column(12);
+					@include make-sm-column(2);
+					@include make-md-column(2);
+				}
+
+				#maps {
+					@include make-xs-column(12);
+					@include make-sm-column(5);
+					@include make-md-column(4);
+					@include make-md-column-offset(1);
+				}
+
+				h4 {
+					margin: 0;
+
+					a {
+						font: bold 18px $fonte_principal;
+						color: #FFFFFF;
+						text-decoration: none;
+					}				
+				}
+
+				ul {
+					list-style: none;
+					padding-left: 0px;
+
+					li {
+						
+						a {
+							font: 300 14px $fonte_principal;
+							color: #FFFFFF;
+							text-decoration: none;
+
+							&:hover {
+								font-weight: bold;
+							}														
+						}						
+					}
+				}
+			}//mapa
+
+
+
+			#desenvolvido {
+				@include make-xs-column(12);
+				@include make-sm-column(12);
+				@include make-md-column(12);
+
+				font: 300 12px $fonte_principal;
+				color: #FFFFFF;
+				text-align: center;
+				margin: 10px;
+
+				a {
+					text-decoration: none;
+					color: #FFFFFF;
+
+					&:hover {
+						font-weight: bold;
+					}
+				}
+			}
+		}//container
+	}//footer
+}

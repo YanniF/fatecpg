@@ -1,0 +1,149 @@
+body {
+	#slider {
+		.content {
+			#slider__navegacao {
+				// @include make-xs-column(12);
+				// @include make-sm-column(12);
+				// @include make-md-column(12);
+
+				margin: 15px 0;
+
+				.item {
+					img{			
+						display: block;	
+						width: 100%;	
+						height: auto;
+						cursor: pointer;		
+					}	
+				}
+				.owl-controls {
+					margin-top: 5px;
+				}
+			}	
+		}//content
+	}//slider
+
+	#cursos {		
+		margin-top: 50px;
+		
+		> .content {				
+			> h2 {
+				@include make-xs-column(12);
+				@include make-sm-column(12);
+				@include make-md-column(12);
+				
+				margin: 0;					
+				text-align: center;
+				font: bold 30px $fonte_principal;
+				color: $titulo;
+				margin-bottom: 25px;
+			}
+		}
+
+		> #cursos__itens {					
+			margin-bottom: 50px;
+
+			> .cursos__item {
+				@include make-xs-column(12);
+				@include make-sm-column(6);
+				@include make-md-column(3);
+
+				> a {
+					text-decoration: none;
+
+					> img {
+						margin: 10px auto;
+					}
+
+					> h3 {
+						font: 400 16px $fonte_principal;
+						color: $texto;							
+						text-align: center;
+
+						&:hover {
+							font-weight: bold;
+						}
+					}
+				}					
+			}//cursos__item				
+		}//cursos__itens
+	}//cursos
+
+	#noticias {
+		margin-bottom: 50px;
+
+		> .content {				
+			> h2 {
+				@include make-xs-column(12);
+				@include make-sm-column(12);
+				@include make-md-column(12);
+				
+				margin: 0;					
+				text-align: center;
+				font: bold 30px $fonte_principal;
+				color: $titulo;
+				//margin-bottom: 25px;
+			}
+		}
+
+			#noticias__itens {
+				.noticias__item{
+
+					> .data {
+						@include make-xs-column(12);
+						@include make-sm-column(2);
+						@include make-md-column(2);
+
+						text-align: right;
+						margin-top: 28px;
+						padding-left: 0;						
+						font: bold 16px 'Arial';
+						color: $texto;
+					}
+
+					> .noticia {
+						@include make-xs-column(12);
+						@include make-sm-column(10);
+						@include make-md-column(10);
+
+						padding-right: 0;
+						
+						> h3 {
+							margin: 25px 0 0 0;
+							font: bold 22px 'Arial';												
+
+							> a {
+								text-decoration: none;
+								color: $texto;		
+
+								&:hover {
+									font-weight: 800;
+								}							
+							}							
+						}						
+
+						> p {
+							font: 400 16px 'Arial';
+							color: $texto;
+							text-align: justify;
+							margin-bottom: 5px;							
+						}
+
+						> span {
+							font: 400 14px 'Arial';
+							color: $titulo;
+							
+							a {
+								text-decoration: none;
+
+								&:hover {
+									font-weight: bold;
+								}
+							}							
+						}
+					}//noticia
+				}//noticias__item			
+			}//noticias__itens
+	}//noticias		
+}
+		
