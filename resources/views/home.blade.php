@@ -48,7 +48,7 @@
     <!-- Notícias -->   
     <div class="container" id="noticias">
         <div class="content">
-            <h2>Notícias</h2>
+            <h2><a href="/noticia">Notícias</a></h2>
         </div>
         <div class="content" id="noticias__itens">
             <div class="noticias__item">

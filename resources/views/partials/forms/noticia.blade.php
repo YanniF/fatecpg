@@ -1,16 +1,16 @@
 	    <div class="form-group">
-		  {!! Form::label('lblTituloNoticia','Título') !!}
+		  {!! Form::label('tituloNoticia','Título') !!}
 		  {!! Form::text('tituloNoticia',null,['class'=>'form-control']) !!}
 	    </div>
 	    <div class="form-group">
-		  {!! Form::label('lblCorpoNoticia','Corpo') !!}
+		  {!! Form::label('corpoNoticia','Corpo') !!}
 		  {!! Form::text('corpoNoticia',null,['class'=>'form-control']) !!}
 	    </div>		
 	    <div class="form-group">
-		  {!! Form::label('lblDataInicio','Início') !!}
+		  {!! Form::label('dataInicio','Início') !!}
 		  {!! Form::date('dataInicio',null,['class'=>'form-control']) !!}
 	    </div>		
 	    <div class="form-group">
-		  {!! Form::label('lblDataExpiraca','Expiração') !!}
+		  {!! Form::label('dataExpiracao','Expiração') !!}
 		  {!! Form::date('dataExpiracao',null,['class'=>'form-control']) !!}
-	    </div>		
+	    </div>

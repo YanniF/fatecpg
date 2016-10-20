@@ -77,12 +77,15 @@ body {
 				@include make-xs-column(12);
 				@include make-sm-column(12);
 				@include make-md-column(12);
-				
+
 				margin: 0;					
 				text-align: center;
 				font: bold 30px $fonte_principal;
-				color: $titulo;
-				//margin-bottom: 25px;
+				
+				a {					
+					text-decoration: none;
+					color: $titulo;
+				}
 			}
 		}
 
@@ -97,7 +100,7 @@ body {
 						text-align: right;
 						margin-top: 28px;
 						padding-left: 0;						
-						font: bold 16px 'Arial';
+						font: bold 16px $fonte_texto;
 						color: $texto;
 					}
 
@@ -110,34 +113,30 @@ body {
 						
 						> h3 {
 							margin: 25px 0 0 0;
-							font: bold 22px 'Arial';												
+							font: bold 22px $fonte_texto;												
 
 							> a {
 								text-decoration: none;
-								color: $texto;		
-
-								&:hover {
-									font-weight: 800;
-								}							
+								color: $texto;							
 							}							
 						}						
 
 						> p {
-							font: 400 16px 'Arial';
+							font: 400 16px $fonte_texto;
 							color: $texto;
 							text-align: justify;
 							margin-bottom: 5px;							
 						}
 
 						> span {
-							font: 400 14px 'Arial';
+							font: 400 14px $fonte_texto;
 							color: $titulo;
 							
 							a {
 								text-decoration: none;
 
 								&:hover {
-									font-weight: bold;
+									font-weight: bold;				
 								}
 							}							
 						}

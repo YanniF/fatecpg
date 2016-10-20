@@ -63,41 +63,64 @@
                         </div>
             
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                          <ul class="nav navbar-nav">
-                            <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Análise e Desenvolvimento de Sistemas</a></li>
-                                <li><a href="#">Comércio Exterior</a></li>
-                                <li><a href="#">Gestão Empresarial</a></li>
-                                <li><a href="#">Processos Químicos</a></li>
-                              </ul>
-                            </li>
-                            <li><a href="https://www.vestibularfatec.com.br/home/" target="_blank">Vestibular</a></li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Siga <span class="caret"></span></a>
-                              <ul class="dropdown-menu">
-                                <li><a href="https://www.sigacentropaulasouza.com.br/aluno/login.aspx" target="_blank">Aluno</a></li>
-                                <li><a href="https://www.sigacentropaulasouza.com.br/fatec/defaultt.html" target="_blank">Professor</a></li>
-                              </ul>
-                            </li>
-                            <li><a href="#">Estágio</a></li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos <span class="caret"></span></a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Biblioteca</a></li>
-                                <li><a href="#">Coordenação</a></li>
-                                <li><a href="#">Direção</a></li>
-                                <li><a href="#">DTI</a></li>
-                                <li><a href="#">Secretaria</a></li>
-                              </ul>
-                            </li>
-                          </ul>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Análise e Desenvolvimento de Sistemas</a></li>
+                                        <li><a href="#">Comércio Exterior</a></li>
+                                        <li><a href="#">Gestão Empresarial</a></li>
+                                        <li><a href="#">Processos Químicos</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://www.vestibularfatec.com.br/home/" target="_blank">Vestibular</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Siga <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://www.sigacentropaulasouza.com.br/aluno/login.aspx" target="_blank">Aluno</a></li>
+                                        <li><a href="https://www.sigacentropaulasouza.com.br/fatec/defaultt.html" target="_blank">Professor</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Estágio</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Biblioteca</a></li>
+                                        <li><a href="#">Coordenação</a></li>
+                                        <li><a href="#">Direção</a></li>
+                                        <li><a href="#">DTI</a></li>
+                                        <li><a href="#">Secretaria</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                           
-                          <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#" data-toggle="modal" data-target="#loginModal">Login<img src="img/icone_usuario.png" alt="Usuário"></a></li>                           
-                          </ul>
+                            <ul class="nav navbar-nav navbar-right">
+
+                            @if (Auth::guest())
+                                <li><a href="#" data-toggle="modal" data-target="#loginModal">Login <span class="glyphicon glyphicon-user"></span></a></li>
+                            @else                                
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="{{ url('/logout') }}"
+                                                onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                                <span class="glyphicon glyphicon-log-out"></span> Logout
+                                            </a>
+
+                                            <form id="logout-form" action="{{ url('/logout') }}" method="post" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endif
+                            </ul>
                         </div>
 
                     </nav>
@@ -116,23 +139,36 @@
                     <h4 class="modal-title">Login</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
-                        <div class="form-group">
+                    <form class="form-horizontal" role="form" method="post" action="{{ url('/login') }}">
+                        {{ csrf_field() }}
+                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                             <label class="control-label" for="username">Usuário:</label>
                             <div class="inputs">
-                                <input type="text" class="form-control" id="username" maxlength="13" placeholder="Matrícula">
+                                <input type="text" class="form-control" name="username" id="username" maxlength="30" placeholder="Matrícula" required>
+
+                                @if ($errors->has('username'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="control-label" for="password">Senha:</label>
                             <div class="inputs">
-                                <input type="password" class="form-control" id="password" maxlength="30" placeholder="Senha">
+                                <input type="password" class="form-control" name="password" id="password" maxlength="30" placeholder="Senha" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="check">
                                 <div class="checkbox">
-                                    <label><input type="checkbox"> Lembrar</label>
+                                    <label><input type="checkbox" name="remember"> Lembrar</label>
                                 </div>
                             </div>
                         </div>
