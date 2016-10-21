@@ -11,7 +11,7 @@
 
     <title>Fatec PG</title>
 
-    <link rel="icon" type="image/png" href="img/icone.png" />
+    <link rel="icon" type="image/png" href="{{ asset('img/icone.png') }}" />
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="{{ asset('css/plugins/plugins.css') }}">
@@ -68,10 +68,10 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Análise e Desenvolvimento de Sistemas</a></li>
-                                        <li><a href="#">Comércio Exterior</a></li>
-                                        <li><a href="#">Gestão Empresarial</a></li>
-                                        <li><a href="#">Processos Químicos</a></li>
+                                        <li><a href="{{ url('/cursos/ads') }}">Análise e Desenvolvimento de Sistemas</a></li>
+                                        <li><a href="{{ url('/cursos/comex') }}">Comércio Exterior</a></li>
+                                        <li><a href="{{ url('/cursos/ge') }}">Gestão Empresarial</a></li>
+                                        <li><a href="{{ url('/cursos/pq') }}">Processos Químicos</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="https://www.vestibularfatec.com.br/home/" target="_blank">Vestibular</a></li>
