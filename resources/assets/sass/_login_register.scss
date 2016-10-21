@@ -1,0 +1,67 @@
+body {
+	> .login {
+		> .content {
+			> .formulario {
+				margin: 25px 0 50px;
+				font-family: $fonte_principal;
+				
+				> h2 {
+					@include make-xs-column(12);
+					@include make-sm-column(12);
+					@include make-md-column(12);
+						
+					padding-left: 0;
+					color: $titulo;					
+				}
+
+				> .form-horizontal {
+					> .form-group {
+						> .control-label {
+							
+							@include make-xs-column(3);
+							@include make-sm-column(2);
+							@include make-md-column(1);
+
+							font-size: 16px;						
+						}
+
+						> .inputs {
+
+							@include make-xs-column(9);
+							@include make-sm-column(10);
+							@include make-md-column(5);							
+							@include make-md-column-offset(6);
+							@include make-md-column-pull(6);
+
+							font-size: 16px;
+						}
+
+						> .check {
+
+							@include make-xs-column(12);
+							@include make-sm-column(10);							
+							@include make-sm-column-offset(2);
+							@include make-md-column(11);
+							@include make-md-column-offset(1);
+
+							font-size: 16px;
+						}
+
+						.botao {
+							
+							@include make-xs-column(12);
+							@include make-sm-column(10);							
+							@include make-sm-column-offset(2);
+							@include make-md-column(11);
+							@include make-md-column-offset(1);
+
+							.btn {
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+		}//content
+	}//login
+}

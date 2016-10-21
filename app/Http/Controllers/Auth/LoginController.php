@@ -5,6 +5,9 @@ namespace FatecPG\Http\Controllers\Auth;
 use FatecPG\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Lang;
+use Illuminate\Http\Request;
+
 class LoginController extends Controller
 {
     /*
@@ -25,6 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
+
     protected $redirectTo = '/';
 
     /**
@@ -39,5 +43,15 @@ class LoginController extends Controller
 
     public function username() {
         return 'username';
+    }
+
+    //sobrescrevendo este método para redicionar para a página caso o login não tenha sido realizado
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        return redirect()->to('/login')
+            ->withInput($request->only($this->username(), 'remember'))
+            ->withErrors([
+                $this->username() => Lang::get('auth.failed'),
+            ]);
     }
 }

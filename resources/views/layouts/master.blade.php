@@ -141,28 +141,16 @@
                 <div class="modal-body">
                     <form class="form-horizontal" role="form" method="post" action="{{ url('/login') }}">
                         {{ csrf_field() }}
-                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label class="control-label" for="username">Usuário:</label>
                             <div class="inputs">
                                 <input type="text" class="form-control" name="username" id="username" maxlength="30" placeholder="Matrícula" required>
-
-                                @if ($errors->has('username'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label class="control-label" for="password">Senha:</label>
                             <div class="inputs">
                                 <input type="password" class="form-control" name="password" id="password" maxlength="30" placeholder="Senha" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
                             </div>
                         </div>
                         <div class="form-group">
