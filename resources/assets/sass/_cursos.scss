@@ -1,0 +1,26 @@
+body {
+	> .ads {
+		> .content {
+			> .conteudo {
+
+				@include make-xs-column(12);
+				@include make-sm-column(12);
+				@include make-md-column(12);
+				
+				margin-top: 25px;
+				margin-bottom: 50px;
+				padding: 0;
+				font-family: $fonte_principal;
+				color: $texto;
+				
+				> h2 {
+								
+				}
+
+				p {
+
+				}
+			}
+		}
+	}//cursos
+}

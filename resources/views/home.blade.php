@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title', 'Página Inicial')
 @section('content')
 <!-- Slider --> 
     <div class="container" id="slider">

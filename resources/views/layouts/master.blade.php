@@ -9,7 +9,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="DTI Fatec Praia Grande">
 
-    <title>Fatec PG</title>
+    <title>Fatec PG - @yield('title')</title>
 
     <link rel="icon" type="image/png" href="{{ asset('img/icone.png') }}" />
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
@@ -64,8 +64,8 @@
             
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                                <li class="dropdown">
+                                <li {{ (Request::is('/') ? 'class=active' : '') }}><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                                <li class="dropdown {{ (Request::is('cursos/*') ? 'active' : '') }}">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ url('/cursos/ads') }}">Análise e Desenvolvimento de Sistemas</a></li>
@@ -83,14 +83,14 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Estágio</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos <span class="caret"></span></a>
+                                <li class="dropdown {{ (Request::is('departamentos/*') ? 'active' : '') }}">
+                                    <a href="http://www.fatecpg.com.br/estagio/default.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Biblioteca</a></li>
+                                        <li><a href="http://www.biblioceeteps.com.br/">Biblioteca</a></li>
                                         <li><a href="#">Coordenação</a></li>
                                         <li><a href="#">Direção</a></li>
-                                        <li><a href="#">DTI</a></li>
-                                        <li><a href="#">Secretaria</a></li>
+                                        <li><a href="http://www.fatecpg.com.br/tic/default.aspx">DTI</a></li>
+                                        <li><a href="http://www.fatecpg.com.br/fatec/pages/Secretaria.aspx">Secretaria</a></li>
                                     </ul>
                                 </li>
                             </ul>

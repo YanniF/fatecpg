@@ -1,11 +1,11 @@
 @extends('layouts.master')
-
+@section('title', 'ADS')
 @section('content')
 	
-	<div class="container">
+	<div class="container ads">
 		<div class="content">
 			<div class="conteudo">
-				<h2>Análise e Desenvolvimento de Sistemas</h2>
+				<h2>Tecnologia em Análise e Desenvolvimento de Sistemas</h2>
             	<p>O profissional de Análise e Desenvolvimento de Sistemas de Informação pode atuar em empresas de assessoria e consultoria tecnológica e de desenvolvimento de sistemas, assim como nos diversos setores da economia: indústria, comércio, prestação de serviços, instituições financeiras, órgãos públicos ou como empreendedor em informática. Este profissional estará apto a:</p>
 
 				<ul>
@@ -26,34 +26,33 @@
 							<th>2° Ciclo</th>
 							<th>3° Ciclo</th>
 						</tr>
-						
 					</thead>
 					<tbody>
 						<tr>
-							<td>Programação em Microinformática <br>
-			                    Algoritmos e Lógica de Programação <br>
-			                    Laboratório de Hardware   <br>
-			                    Arquitetura e Organização de Computadores <br>
-			                    Administração Geral <br>
-			                    Matemática Discreta <br>
-			                    Inglês I
+							<td><span class="glyphicon glyphicon-menu-right"></span> Programação em Microinformática <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Algoritmos e Lógica de Programação <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Laboratório de Hardware   <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Arquitetura e Organização de Computadores <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Administração Geral <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Matemática Discreta <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Inglês I
 			                </td>
-							<td>Engenharia de Software I  <br>
-			                    Linguagem de Programação   <br>                     
-			                    Sistemas de Informação <br>
-			                    Contabilidade  <br>
-			                    Cálculo <br>
-			                    Comunicação e Expressão <br>
-			                    Inglês II 
+							<td><span class="glyphicon glyphicon-menu-right"></span> Engenharia de Software I  <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Linguagem de Programação <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Sistemas de Informação <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Contabilidade <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Cálculo <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Comunicação e Expressão <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Inglês II 
 			                </td>
-							<td>Engenharia de Software II  <br>
-			                    Interação Humano Computador <br>
-			                    Estruturas de Dados       <br>       
-			                    Sistemas Operacionais I <br>
-			                    Economia e Finanças  <br>
-			                    Estatística aplicada <br>
-			                    Sociedade  e Tecnologia <br>
-			                    Inglês III 
+							<td><span class="glyphicon glyphicon-menu-right"></span> Engenharia de Software II  <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Interação Humano Computador <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Estruturas de Dados <br>       
+			                    <span class="glyphicon glyphicon-menu-right"></span> Sistemas Operacionais I <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Economia e Finanças  <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Estatística aplicada <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Sociedade e Tecnologia <br>
+			                    <span class="glyphicon glyphicon-menu-right"></span> Inglês III 
 		                    </td>
 						</tr>
 					</tbody>
@@ -65,30 +64,30 @@
 						</tr>
 						<tbody>
 							<tr>
-								<td>Programação em Microinformática <br>
-				                    Algoritmos e Lógica de Programação <br>
-				                    Laboratório de Hardware   <br>
-				                    Arquitetura e Organização de Computadores <br>
-				                    Administração Geral <br>
-				                    Matemática Discreta <br>
-				                    Inglês I
+								<td><span class="glyphicon glyphicon-menu-right"></span> Engenharia de Software III <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Programação Orientada a Objetos <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Banco de Dados <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Sistemas Operacionais II <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Eletiva I <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Metodologia da Pesquisa Científico-tecnológica <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Inglês IV
 				                </td>
-				                <td> Engenharia de Software I  <br>
-				                    Linguagem de Programação   <br>                     
-				                    Sistemas de Informação <br>
-				                    Contabilidade  <br>
-				                    Cálculo <br>
-				                    Comunicação e Expressão <br>
-				                    Inglês II 
+				                <td><span class="glyphicon glyphicon-menu-right"></span> Laboratório de Engenharia de Software <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Segurança da Informação <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Redes de computadores <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Laboratório de Banco de Dados <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Eletiva II <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Programação Linear e Aplicações <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Inglês V
 				                </td>
-				                <td>Engenharia de Software II  <br>
-				                    Interação Humano Computador <br>
-				                    Estruturas de Dados       <br>       
-				                    Sistemas Operacionais I <br>
-				                    Economia e Finanças  <br>
-				                    Estatística aplicada <br>
-				                    Sociedade  e Tecnologia <br>
-				                    Inglês III 
+				                <td><span class="glyphicon glyphicon-menu-right"></span> Gestão de Projetos <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Gestão e Governança de Tecnologia da Informação <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Tópicos Especiais em Informática <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Inteligência Artificial <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Gestão de  Equipes <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Empreendedorismo <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Ética e Responsabilidade Profissional <br>
+				                    <span class="glyphicon glyphicon-menu-right"></span> Inglês VI 
 				                </td>
 							</tr>
 						</tbody>
@@ -97,7 +96,7 @@
 
 				<ul>
 					<li><strong>Carga Horária:</strong> 2.800</li>
-					<li><strong>Duração (meses):</strong> 36</li>
+					<li><strong>Duração:</strong> 3 anos</li>
 		            <li><strong>Vagas:</strong> 80</li>
 		            <li><strong>Turnos:</strong> Vespertino e Noturno</li>
 		            <li><strong>Coordenadora:</strong> Prof.ª Simone Maria Viana Romano 
