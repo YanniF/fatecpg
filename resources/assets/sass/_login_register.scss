@@ -4,6 +4,7 @@ body {
 			> .formulario {
 				margin: 25px 0 50px;
 				font-family: $fonte_principal;
+				font-size: 16px;
 				
 				> h2 {
 					@include make-xs-column(12);
@@ -20,9 +21,7 @@ body {
 							
 							@include make-xs-column(3);
 							@include make-sm-column(2);
-							@include make-md-column(1);
-
-							font-size: 16px;						
+							@include make-md-column(1);					
 						}
 
 						> .inputs {
@@ -31,9 +30,7 @@ body {
 							@include make-sm-column(10);
 							@include make-md-column(5);							
 							@include make-md-column-offset(6);
-							@include make-md-column-pull(6);
-
-							font-size: 16px;
+							@include make-md-column-pull(6);							
 						}
 
 						> .check {
@@ -42,9 +39,7 @@ body {
 							@include make-sm-column(10);							
 							@include make-sm-column-offset(2);
 							@include make-md-column(11);
-							@include make-md-column-offset(1);
-
-							font-size: 16px;
+							@include make-md-column-offset(1);							
 						}
 
 						.botao {
@@ -55,7 +50,18 @@ body {
 							@include make-md-column(11);
 							@include make-md-column-offset(1);
 
-							.btn {
+							.btn-primary {
+								background-color: $menu_claro;
+								border: none;
+								font: 600 16px $fonte_principal;
+								color: #fff;
+
+								&:hover {
+									background-color: $menu_escuro;
+								}
+							}
+
+							.btn-link {
 								font-size: 16px;
 							}
 						}

@@ -2,7 +2,7 @@
 @section('title', 'PQ')
 @section('content')
 	
-	<div class="container">
+	<div class="container pq">
 		<div class="content">
 			<div class="conteudo">
 				<h2>Tecnologia em Processos Químicos</h2>
@@ -16,10 +16,10 @@
 					<li> Cosméticos. </li>
 				</ul>
 
-				<table class="table">
+				<table class="table table-responsive">
 					<thead>
 						<tr>
-							<th>Grade Horária</th>
+							<th colspan="3" class="titulo">Grade Horária</th>
 						</tr>
 						<tr>
 							<th>1° Ciclo</th>

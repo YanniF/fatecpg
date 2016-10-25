@@ -83,7 +83,8 @@ body {
 
 								> li {								
 									background-color: $menu_claro;
-								    box-shadow: 0 0 0 2px $menu_claro;	
+								    box-shadow: 0 0 0 2px $menu_claro;
+								    list-style: none;
 
 									&.active{																	
 										> a {										
@@ -126,6 +127,7 @@ body {
 										> li {
 											background-color: $menu_claro;											
 											margin-top: 3px;
+											list-style: none;
 
 											> a {
 												border: none;
@@ -186,11 +188,15 @@ body {
 									border: none;
 									font: 600 16px $fonte_principal;
 									color: #fff;
+
+									&:hover {
+										background-color: $menu_escuro;
+									}
 								}								
 							}
 						}
 					}
-				}
+				}//modal-body
 			}//modal-content
 		}//modal-dialog
 	}//modal

@@ -2,17 +2,17 @@
 @section('title', 'COMEX')
 @section('content')
 	
-	<div class="container">
+	<div class="container comex">
 		<div class="content">
 			<div class="conteudo">
 				<h2>Tecnologia em Comércio Exterior</h2>
             	<p>O Tecnólogo em Comércio Exterior estará apto a:</p>
 				<p>O Tecnólogo em Comércio Exterior gerencia operações de comércio exterior, tais como: transações cambiais, despacho e legislação aduaneira, exportação, importação, contratos e logística internacional. Prospecta e pesquisa mercados, define plano de ação, negocia e executa operações legais, administrativas, tributárias e cambiais inerentes ao processo de exportação e importação. Além disso, controla fluxos de embarque e desembarque de produtos, providencia documentos e identifica os melhores meios de transporte, de forma a otimizar os recursos financeiros e humanos para o comércio exterior. Portador de conhecimentos multidisciplinares, deve ser capaz de atender às necessidades geradas pelos avanços tecnológicos, exercer julgamento, avaliar riscos e tomar decisões que lhe permitam gerenciar seu próprio negócios.</p>
 
-				<table class="table">
+				<table class="table table-responsive">
 					<thead>
 						<tr>
-							<th>Grade Horária</th>
+							<th colspan="3" class="titulo">Grade Horária</th>
 						</tr>
 						<tr>
 							<th>1° Ciclo</th>

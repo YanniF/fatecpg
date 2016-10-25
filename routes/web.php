@@ -2,9 +2,10 @@
 
 Auth::routes();
 
-Route::get('/', function() {
-	return view('home');
-});
+// Route::get('/', function() {
+// 	return view('home');
+// });
+Route::get('/','Principal@paginaInicial');
 
 Route::resource('noticia','NoticiaController');
 

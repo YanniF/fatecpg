@@ -16,10 +16,10 @@
 					<li> Empreender seu próprio negócio em informática. </li>
 				</ul>
 
-				<table class="table">
+				<table class="table table-responsive">
 					<thead>
 						<tr>
-							<th>Grade Horária</th>
+							<th colspan="3" class="titulo">Grade Horária</th>
 						</tr>
 						<tr>
 							<th>1° Ciclo</th>

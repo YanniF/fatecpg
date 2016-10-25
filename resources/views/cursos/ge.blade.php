@@ -2,7 +2,7 @@
 @section('title', 'GE')
 @section('content')
 	
-	<div class="container">
+	<div class="container ge">
 		<div class="content">
 			<div class="conteudo">
 				<h2>Tecnologia em Gestão Empresarial</h2>
@@ -16,10 +16,10 @@
 					<li> Nas entidades particulares, tais como: cooperativas, associações, dentre outras.</li>
 				</ul>
 
-				<table class="table">
+				<table class="table table-responsive">
 					<thead>
 						<tr>
-							<th>Grade Horária</th>
+							<th colspan="3" class="titulo">Grade Horária</th>
 						</tr>
 						<tr>
 							<th>1° Ciclo</th>

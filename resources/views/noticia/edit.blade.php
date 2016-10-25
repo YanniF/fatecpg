@@ -1,13 +1,15 @@
 @extends('layouts.master')
+@section('title', 'Notícias')
 @section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1>Notícias</h1>
+<div class="container noticias">
+  <div class="content">
+    <h2>Notícias</h2>
+    <div class="formulario">
 	  {!! Html::ul($errors->all()) !!}
 	  {!! Form::model($noticia,['url' => 'noticia/'.$noticia->id, 'method' => 'put']) !!}
 	    @include('partials.forms.noticia')
-		{!! Form::submit('Enviar',['class'=>'btn btn-default']) !!}
+		{!! Form::submit('Salvar',['class'=>'btn btn-default']) !!}
+		<a class="btn btn-default" href="{{ action('NoticiaController@index') }}">Cancelar</a>
 	  {!! Form::close() !!}
 	</div>
   </div>

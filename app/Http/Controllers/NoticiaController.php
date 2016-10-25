@@ -5,11 +5,17 @@ namespace FatecPG\Http\Controllers;
 use Illuminate\Http\Request;
 
 use FatecPG\Http\Requests as NR;
+use FatecPG\Noticia;
 
 class NoticiaController extends Controller
 {
+	public function __construct(Request $request) {
+        
+        $this->middleware('auth');
+    }
+
     protected function index() {
-		$noticias = \FatecPG\Noticia::all();
+		$noticias = Noticia::all();
 		return view('noticia.index')->with('noticias',$noticias);
 	}
 	
@@ -18,7 +24,7 @@ class NoticiaController extends Controller
 	}
 	
 	protected function store(NR\NoticiaRequest $request) {
-		\FatecPG\Noticia::create($request->all());
+		Noticia::create($request->all());
 		return redirect('noticia');
 	}
 	

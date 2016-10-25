@@ -19,25 +19,25 @@
         </div>
         <div class="content" id="cursos__itens">
             <div class="cursos__item">
-                <a href="#">
+                <a href="{{ url('/cursos/ads') }}">
                     <img src="img/icone_ads.png" class="img-responsive" alt="Análise e Desenvolvimento de Sistemas" title="Análise e Desenvolvimento de Sistemas">
                     <h3>Análise e Desenvolvimento de Sistemas</h3>
                 </a>
             </div>
             <div class="cursos__item">
-                <a href="#">
+                <a href="{{ url('/cursos/comex') }}">
                     <img src="img/icone_comex.png" class="img-responsive" alt="Comércio Exterior" title="Comércio Exterior">
                     <h3>Comércio Exterior</h3>
                 </a>
             </div>
             <div class="cursos__item">
-                <a href="#">
+                <a href="{{ url('/cursos/ge') }}">
                     <img src="img/icone_ge.png" class="img-responsive" alt="Gestão Empresarial" title="Gestão Empresarial">
                     <h3>Gestão Empresarial</h3>
                 </a>
             </div>
             <div class="cursos__item">
-                <a href="#">
+                <a href="{{ url('/cursos/pq') }}">
                     <img src="img/icone_pq.png" class="img-responsive" alt="Processos Químicos" title="Processos Químicos">     
                     <h3>Processos Químicos</h3>
                 </a>
@@ -51,30 +51,17 @@
             <h2><a href="/noticia">Notícias</a></h2>
         </div>
         <div class="content" id="noticias__itens">
-            <div class="noticias__item">
-                <div class="data">05/05/2016</div>
-                <div class="noticia">
-                    <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non semper turpis. Etiam eleifend tristique nisl mollis facilisis. Donec id metus id massa porttitor bibendum. Integer sed vulputate massa, quis aliquam enim. Nulla id quam sapien. Aenean malesuada congue orci, et consequat orci placerat eget. In viverra diam in lacus consectetur, ac sagittis ipsum porta. Donec feugiat consequat mi, a dapibus metus euismod eu. Duis tellus enim, porttitor et ligula at, mattis molestie nisi.</p>
-                    <span><a href="#">Continue lendo...</a></span>
+
+            @foreach($noticias as $n)
+                <div class="noticias__item">
+                    <div class="data">{{ $n->dataInicio}}</div>
+                    <div class="noticia">
+                        <h3><a href="#">{{ $n->tituloNoticia }}</a></h3>
+                        <p>{{ $n->corpoNoticia }}</p>
+                        <span><a href="#">Continue lendo...</a></span>
+                    </div>
                 </div>
-            </div>
-            <div class="noticias__item">
-                <div class="data">05/05/2016</div>
-                <div class="noticia">
-                    <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non semper turpis. Etiam eleifend tristique nisl mollis facilisis. Donec id metus id massa porttitor bibendum. Integer sed vulputate massa, quis aliquam enim. Nulla id quam sapien. Aenean malesuada congue orci, et consequat orci placerat eget. In viverra diam in lacus consectetur, ac sagittis ipsum porta. Donec feugiat consequat mi, a dapibus metus euismod eu. Duis tellus enim, porttitor et ligula at, mattis molestie nisi.</p>
-                    <span><a href="#">Continue lendo...</a></span>
-                </div>
-            </div>
-            <div class="noticias__item">
-                <div class="data">05/05/2016</div>
-                <div class="noticia">
-                    <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non semper turpis. Etiam eleifend tristique nisl mollis facilisis. Donec id metus id massa porttitor bibendum. Integer sed vulputate massa, quis aliquam enim. Nulla id quam sapien. Aenean malesuada congue orci, et consequat orci placerat eget. In viverra diam in lacus consectetur, ac sagittis ipsum porta. Donec feugiat consequat mi, a dapibus metus euismod eu. Duis tellus enim, porttitor et ligula at, mattis molestie nisi.</p>
-                    <span><a href="#">Continue lendo...</a></span>
-                </div>
-            </div>
+            @endforeach
         </div><!-- noticias__itens -->
     </div><!-- container -->
 @endsection

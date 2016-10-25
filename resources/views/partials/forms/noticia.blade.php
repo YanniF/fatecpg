@@ -4,8 +4,10 @@
 	    </div>
 	    <div class="form-group">
 		  {!! Form::label('corpoNoticia','Corpo') !!}
-		  {!! Form::text('corpoNoticia',null,['class'=>'form-control']) !!}
-	    </div>		
+		  {!! Form::textarea('corpoNoticia',null,['class'=>'form-control']) !!}
+	    </div>
+    </div>
+    <div class="formulario2">	
 	    <div class="form-group">
 		  {!! Form::label('dataInicio','Início') !!}
 		  {!! Form::date('dataInicio',null,['class'=>'form-control']) !!}

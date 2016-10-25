@@ -1,5 +1,8 @@
 body {
-	> .ads {
+	> .ads, 
+	> .comex,
+	> .ge,
+	> .pq {
 		> .content {
 			> .conteudo {
 
@@ -9,18 +12,39 @@ body {
 				
 				margin-top: 25px;
 				margin-bottom: 50px;
-				padding: 0;
+				padding: 0;				
+				font-size: 16px;
 				font-family: $fonte_principal;
+				text-align: justify;
 				color: $texto;
 				
-				> h2 {
-								
+				ul {
+					li {
+						list-style: square;
+					}
 				}
 
-				p {
+				.table {
+					margin-top: 50px;
+					
+					tr {
+						.titulo {
+							font-size: 18px;
+						}
 
+						th {
+							text-align: center;
+						}
+
+						td {
+							text-align: left;
+							span {
+								font-size: 12px;
+							}
+						}
+					}															
 				}
-			}
-		}
+			}//conteudo
+		}//content
 	}//cursos
 }
