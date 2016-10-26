@@ -5,7 +5,10 @@
 		<div class="content">
 			<div class="noticias-info">
 			<h2>Notícias</h2>
-			<a class="btn btn-default" href="{{url('noticia/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
+			
+			@if(!Auth::guest())
+				<a class="btn btn-default" href="{{url('noticia/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
+			@endif
 			{!! Html::ul($noticias->all()) !!}
 			</div>
 		</div>

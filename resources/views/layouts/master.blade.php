@@ -194,10 +194,10 @@
                 <div id="mapa_cursos">
                     <h4><a href="#">Cursos</a></h4>
                     <ul>
-                        <li><a href="#">Análise de Desenvolvimento de Sistemas</a></li>
-                        <li><a href="#">Comércio Exterior</a></li>
-                        <li><a href="#">Gestão Empresarial</a></li>
-                        <li><a href="#">Processos Químicos</a></li>
+                        <li><a href="{{ url('/cursos/ads') }}">Análise de Desenvolvimento de Sistemas</a></li>
+                        <li><a href="{{ url('/cursos/comex') }}">Comércio Exterior</a></li>
+                        <li><a href="{{ url('/cursos/ge') }}">Gestão Empresarial</a></li>
+                        <li><a href="{{ url('/cursos/pq') }}">Processos Químicos</a></li>
                     </ul>
                 </div>
                 <div class="mapa_dar_nome">

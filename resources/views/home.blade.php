@@ -54,11 +54,26 @@
 
             @foreach($noticias as $n)
                 <div class="noticias__item">
-                    <div class="data">{{ $n->dataInicio}}</div>
+                    <div class="data">{{ Carbon\Carbon::parse($n->dataInicio)->format('d/m/Y') }}</div>
                     <div class="noticia">
                         <h3><a href="#">{{ $n->tituloNoticia }}</a></h3>
+                        
+                        <?php
+                            $grande = false;
+                            //limitar a quantidade de caracteres exibidos
+                            if(strlen($n->corpoNoticia) > 600) {
+                                $grande = true;
+                                $textoMenor = substr($n->corpoNoticia, 0, 600);//cortando texto                                
+                                $n->corpoNoticia = substr($textoMenor, 0, strrpos($textoMenor, ' ')) . '...'; //corta ao término da palavra
+                            }
+                        ?>                        
                         <p>{{ $n->corpoNoticia }}</p>
-                        <span><a href="#">Continue lendo...</a></span>
+                        
+                        <?php
+                            if($grande)  {   
+                                echo "<span><a href='#'>Continue lendo...</a></span>";                         
+                            }
+                        ?>
                     </div>
                 </div>
             @endforeach
