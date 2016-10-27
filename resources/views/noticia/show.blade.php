@@ -12,7 +12,7 @@
 		<div class="content">
 			<div class="noticias-info">
 				<p class="data">Publicado em: {{ Carbon\Carbon::parse($noticia->dataInicio)->format('d/m/Y') }} <br>
-					Criado por:
+					Criado por: {{ $noticia->created_by }}
 				</p>
 				<p>{{ $noticia->corpoNoticia }}</p>
 			</div>

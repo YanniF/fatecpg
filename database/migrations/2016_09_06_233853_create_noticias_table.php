@@ -18,8 +18,14 @@ class CreateNoticiasTable extends Migration
             $table->string('tituloNoticia', 100);
 			$table->text('corpoNoticia');
 			$table->date('dataInicio');
-			$table->date('dataExpiracao');
+			$table->date('dataExpiracao');            
+            $table->integer('created_by')->unsigned()->nullable();
+            $table->integer('updated_by')->unsigned()->nullable();
+
             $table->timestamps();
+
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
         });
     }
 

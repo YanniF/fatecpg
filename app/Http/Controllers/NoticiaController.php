@@ -18,12 +18,16 @@ class NoticiaController extends Controller
 		return view('noticia.index')->with('noticias', $noticias);
 	}
 	
-	protected function create(){
+	protected function create(){		
 		return view('noticia.create');
 	}
 	
 	protected function store(NR\NoticiaRequest $request) {
-		Noticia::create($request->all());
+		
+		$req = $request->all();		
+		$req['created_by'] =  \Auth::user()->id;//inserir o usuário que cadastrou a notícia
+
+		Noticia::create($req);
 		return redirect('noticia');
 	}
 	
