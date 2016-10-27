@@ -4,7 +4,7 @@
 	
 	<div class="container ge">
 		<div class="content">
-			<div class="conteudo">
+			<div class="curso-info">
 				<h2>Tecnologia em Gestão Empresarial</h2>
             	<p>Os profissionais formados podem atuar tanto em âmbito nacional, como gestor, em razão da formação generalista e/ou polivalente, como em âmbito estadual com as competências específicas para atuar nas peculiaridades da economia estadual/regional nas seguintes possibilidades:</p>
 				<ul>
@@ -15,7 +15,10 @@
 					<li> No setor público; </li>
 					<li> Nas entidades particulares, tais como: cooperativas, associações, dentre outras.</li>
 				</ul>
-
+			</div>
+		</div>
+		<div class="content">
+			<div class="curso-info">
 				<table class="table table-responsive">
 					<thead>
 						<tr>
@@ -89,8 +92,11 @@
 						</tbody>
 					</thead>
 				</table>
-
-				<ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="curso-info">
+								<ul>
 					<li><strong>Carga Horária:</strong> 2.800</li>
 					<li><strong>Duração:</strong> 3 anos</li>
 		            <li><strong>Vagas:</strong> 40</li>
@@ -101,7 +107,7 @@
 							<li><strong>E-mail: </strong><a href="mailto:nilton@fatecpg.com.br">nilton@fatecpg.com.br</a></li>
 						</ul>
 		            </li>
-				</ul>	
+				</ul>
 			</div>
 		</div>
 	</div>

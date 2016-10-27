@@ -2,11 +2,9 @@
 @import "plugins/bootstrap/bootstrap/mixins";
 @import "variables";
 @import "base";
-@import "header";
-@import "slider_cursos_noticias";
-@import "footer";
+@import "master";
 
 @import "login_register";
-
+@import "home";
 @import "cursos";
 @import "noticias";

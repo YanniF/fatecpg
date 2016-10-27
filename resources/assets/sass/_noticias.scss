@@ -1,67 +1,79 @@
-body {
-	> .noticias {		
-		margin-top: 25px;
-		margin-bottom: 50px;
-		font-family: $fonte_principal;
-		font-size: 16px;
-		color: $texto;
+body {//css para create, edit, index, show
+	> .noticias {
+		> .container {
+			margin-top: 25px;
+			margin-bottom: 50px;
+			font-family: $fonte_principal;
+			font-size: 16px;
+			color: $texto;
 
-		> .content {
-			> .noticias-info {
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(12);
+			> .content {
+				> .noticias-info {
+					@include make-xs-column(12);
+					@include make-sm-column(12);
+					@include make-md-column(12);
 
-				padding: 0;
-				
-				> a {
-					background-color: $menu_claro;
-					border: none;
-					font: 600 14px $fonte_principal;
-					color: #fff;
+					padding: 0;
 
-					&:hover {
-						background-color: $menu_escuro;
+					> .data {
+						margin-top: 0;
+						font-size: 14px;						
+					}
+
+					p {
+						margin-bottom: 25px;
+						text-align: justify;
+					}
+
+					> a {
+						background-color: $menu_claro;
+						border: none;
+						font: 600 14px $fonte_principal;
+						color: #fff;
+
+						&:hover {
+							background-color: $menu_escuro;
+						}
 					}
 				}
-			}
-			
-			//create e edit
-			> .h2 {
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(12);
-			}
-
-			.formulario {
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(8);
 				
-			}
+				//create e edit
+				> .h2 {
+					@include make-xs-column(12);
+					@include make-sm-column(12);
+					@include make-md-column(12);
+				}
 
-			.formulario2 {
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(4);
-				
+				.formulario {
+					@include make-xs-column(12);
+					@include make-sm-column(12);
+					@include make-md-column(8);
+					
+				}
 
-				.btn {
+				.formulario2 {
+					@include make-xs-column(12);
+					@include make-sm-column(12);
 					@include make-md-column(4);
-					@include make-md-column-offset(2);
-					@include make-md-column-pull(1);
+					
 
-					margin-top: 20px;
-					background-color: $menu_claro;
-					border: none;
-					font: 600 16px $fonte_principal;
-					color: #fff;
+					.btn {
+						@include make-md-column(4);
+						@include make-md-column-offset(2);
+						@include make-md-column-pull(1);
 
-					&:hover {
-						background-color: $menu_escuro;
+						margin-top: 20px;
+						background-color: $menu_claro;
+						border: none;
+						font: 600 16px $fonte_principal;
+						color: #fff;
+
+						&:hover {
+							background-color: $menu_escuro;
+						}
 					}
 				}
-			}
-		}//content
+			}//content		
+		}//container	
 	}//noticias
 }

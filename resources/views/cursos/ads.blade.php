@@ -4,7 +4,7 @@
 	
 	<div class="container ads">
 		<div class="content">
-			<div class="conteudo">
+			<div class="curso-info">
 				<h2>Tecnologia em Análise e Desenvolvimento de Sistemas</h2>
             	<p>O profissional de Análise e Desenvolvimento de Sistemas de Informação pode atuar em empresas de assessoria e consultoria tecnológica e de desenvolvimento de sistemas, assim como nos diversos setores da economia: indústria, comércio, prestação de serviços, instituições financeiras, órgãos públicos ou como empreendedor em informática. Este profissional estará apto a:</p>
 
@@ -15,7 +15,10 @@
 					<li> Atuar em Centros de Pesquisa, de Ensino ou de desenvolvimento de software; </li>
 					<li> Empreender seu próprio negócio em informática. </li>
 				</ul>
-
+			</div>
+		</div>
+		<div class="content">
+			<div class="curso-info">
 				<table class="table table-responsive">
 					<thead>
 						<tr>
@@ -93,7 +96,10 @@
 						</tbody>
 					</thead>
 				</table>
-
+			</div>					
+		</div>
+		<div class="content">
+			<div class="curso-info">
 				<ul>
 					<li><strong>Carga Horária:</strong> 2.800</li>
 					<li><strong>Duração:</strong> 3 anos</li>
@@ -106,7 +112,7 @@
 						</ul>
 		            </li>
 				</ul>	
-			</div>
+			</div>					
 		</div>
 	</div>
 

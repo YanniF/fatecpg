@@ -4,11 +4,14 @@
 	
 	<div class="container comex">
 		<div class="content">
-			<div class="conteudo">
+			<div class="curso-info">
 				<h2>Tecnologia em Comércio Exterior</h2>
             	<p>O Tecnólogo em Comércio Exterior estará apto a:</p>
 				<p>O Tecnólogo em Comércio Exterior gerencia operações de comércio exterior, tais como: transações cambiais, despacho e legislação aduaneira, exportação, importação, contratos e logística internacional. Prospecta e pesquisa mercados, define plano de ação, negocia e executa operações legais, administrativas, tributárias e cambiais inerentes ao processo de exportação e importação. Além disso, controla fluxos de embarque e desembarque de produtos, providencia documentos e identifica os melhores meios de transporte, de forma a otimizar os recursos financeiros e humanos para o comércio exterior. Portador de conhecimentos multidisciplinares, deve ser capaz de atender às necessidades geradas pelos avanços tecnológicos, exercer julgamento, avaliar riscos e tomar decisões que lhe permitam gerenciar seu próprio negócios.</p>
-
+			</div>
+		</div>	
+		<div class="content">
+			<div class="curso-info">
 				<table class="table table-responsive">
 					<thead>
 						<tr>
@@ -86,7 +89,11 @@
 						</tbody>
 					</thead>
 				</table>
-
+			</div>	
+		</div>
+				
+		<div class="content">
+			<div class="curso-info">
 				<ul>
 					<li><strong>Carga Horária:</strong> 2.800</li>
 					<li><strong>Duração:</strong> 3 anos</li>
@@ -98,7 +105,7 @@
 							<li><strong>E-mail: </strong><a href="mailto:fernanda.peixoto@fatecpg.com.br  ">fernanda.peixoto@fatecpg.com.br</a></li>
 						</ul>
 		            </li>
-				</ul>	
+				</ul>
 			</div>
 		</div>
 	</div>

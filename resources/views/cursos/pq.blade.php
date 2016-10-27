@@ -4,18 +4,21 @@
 	
 	<div class="container pq">
 		<div class="content">
-			<div class="conteudo">
+			<div class="curso-info">
 				<h2>Tecnologia em Processos Químicos</h2>
             	<p>Atuar na indústria petroquímica, eletroquímicaindústria petroquímica, eletroquímica, farmacêutica e de produção de insumos. com vistas a otimizar e adequar os métodos analíticos envolvidos no controle de qualidade de matérias-primas, reagentes e produtos dos processos químicos industriais. Esse profissional planeja, gerencia e realiza ensaios e análises laboratoriais, registra e interpreta os resultados, emite pareceres, seleciona os métodos e as técnicas mais adequadas à condução de processos de uma unidade industrial, considerando em sua atuação a busca da qualidade, viabilidade e sustentabilidade.</p>
 				<p>Possíveis áreas de atuação:</p>
-
+			
 				<ul>
 					<li> Petroquímica; </li>
 					<li> Petróleo e gás; </li>
 					<li> Farmacêutica; </li>
 					<li> Cosméticos. </li>
 				</ul>
-
+			</div>
+		</div>
+		<div class="content">
+			<div class="curso-info">
 				<table class="table table-responsive">
 					<thead>
 						<tr>
@@ -95,7 +98,11 @@
 						</tbody>
 					</thead>
 				</table>
-
+			</div>
+		</div>
+				
+		<div class="content">
+			<div class="curso-info">
 				<ul>
 					<li><strong>Carga Horária:</strong> 2.800</li>
 					<li><strong>Duração:</strong> 3 anos</li>
@@ -107,7 +114,7 @@
 							<li><strong>E-mail: </strong><a href="mailto:sabrinaeq@hotmail.com">sabrinaeq@hotmail.com</a></li>
 						</ul>
 		            </li>
-				</ul>	
+				</ul>
 			</div>
 		</div>
 	</div>

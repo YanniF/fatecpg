@@ -1,7 +1,9 @@
 @extends('layouts.master')
 @section('title', 'Notícias')
 @section('content')
-	<div class="container noticias">
+
+<div class="noticias">
+	<div class="container">
 		<div class="content">
 			<div class="noticias-info">
 			<h2>Notícias</h2>
@@ -12,5 +14,7 @@
 			{!! Html::ul($noticias->all()) !!}
 			</div>
 		</div>
-	</div>  
+	</div>
+</div>
+
 @stop

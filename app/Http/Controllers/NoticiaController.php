@@ -9,14 +9,13 @@ use FatecPG\Noticia;
 
 class NoticiaController extends Controller
 {
-	public function __construct(Request $request) {
-        
-        $this->middleware('auth', ['except' => 'index']);//o except usa um método
+	public function __construct(Request $request) {        
+        $this->middleware('auth', ['except' => ['index', 'show']]);//o except usa um método. Não é preciso estar logado para visualizar as informações fornecidas pelo index e show
     }
 
     protected function index() {
 		$noticias = Noticia::all();
-		return view('noticia.index')->with('noticias',$noticias);
+		return view('noticia.index')->with('noticias', $noticias);
 	}
 	
 	protected function create(){
@@ -28,17 +27,18 @@ class NoticiaController extends Controller
 		return redirect('noticia');
 	}
 	
-	protected function edit(\FatecPG\Noticia $noticia) {
+	protected function edit(Noticia $noticia) {
 		return view('noticia.edit')->with('noticia', $noticia);
 	}
 	
-	protected function update(NR\NoticiaRequest $request,\FatecPG\Noticia $noticia) {
+	protected function update(NR\NoticiaRequest $request, Noticia $noticia) {
 		$noticia->update($request->all());
 		return redirect('noticia');
 	}
 
-	//protected function show() {
-	//}
+	protected function show(Noticia $noticia) {
+		return view('noticia.show')->with('noticia', $noticia);
+	}
 		
 	//protected function destroy() {
 	//}

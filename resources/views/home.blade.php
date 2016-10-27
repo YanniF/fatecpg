@@ -56,7 +56,7 @@
                 <div class="noticias__item">
                     <div class="data">{{ Carbon\Carbon::parse($n->dataInicio)->format('d/m/Y') }}</div>
                     <div class="noticia">
-                        <h3><a href="#">{{ $n->tituloNoticia }}</a></h3>
+                        <h3><a href="noticia/{{$n->id}}">{{ $n->tituloNoticia }}</a></h3>
                         
                         <?php
                             $grande = false;
@@ -71,7 +71,7 @@
                         
                         <?php
                             if($grande)  {   
-                                echo "<span><a href='#'>Continue lendo...</a></span>";                         
+                                echo "<span><a href='noticia/$n->id'>Continue lendo...</a></span>";                         
                             }
                         ?>
                     </div>
