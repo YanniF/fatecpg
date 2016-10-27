@@ -178,10 +178,10 @@
         <div class="container">
             <div class="content">
                 <div class="redes_sociais">
-                    <a href="https://www.facebook.com/fatecpg">
+                    <a href="https://www.facebook.com/fatecpg" target="_blank">
                         <img src="{{ asset('img/icone_facebook.png') }}" class="img-responsive" alt="Facebook Fatec PG" title="Facebook Fatec PG">
                     </a>
-                    <a href="https://twitter.com/fatecpg">
+                    <a href="https://twitter.com/fatecpg" target="_blank">
                         <img src="{{ asset('img/icone_twitter.png') }}" class="img-responsive" alt="Twitter Fatec PG" title="Twitter Fatec PG">
                     </a>
                 </div>  

@@ -62,7 +62,7 @@
 			}//container
 		}//navegacao
 
-		#cursos {							
+		#cursos {
 			margin-top: 10px;
 
 			> .content {				
@@ -93,10 +93,20 @@
 				}
 			}
 		}//footer
-
-	}
+		
+		> .ads,
+		> .comex,
+		> .ge,
+		> .pq {
+			> .content {
+				.curso-info {
+					margin-top: 10px;
+					font-size: 14px;
+				}
+			}
+		}
+	}//body
 }
-
 
 @media screen and (max-width: 500px) {
 	body {

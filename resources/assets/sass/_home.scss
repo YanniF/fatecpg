@@ -122,14 +122,14 @@ body {
 						}						
 
 						> p {
-							font: 400 16px $fonte_texto;
+							font: 400 16px $fonte_principal;//fonte_texto
 							color: $texto;
 							text-align: justify;
 							margin-bottom: 5px;							
 						}
 
 						> span {
-							font: 400 14px $fonte_texto;
+							font: 400 14px $fonte_principal;
 							color: $titulo;
 							
 							a {

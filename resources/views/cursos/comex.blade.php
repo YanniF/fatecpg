@@ -11,8 +11,8 @@
 			</div>
 		</div>	
 		<div class="content">
-			<div class="curso-info">
-				<table class="table table-responsive">
+			<div class="curso-info table-responsive">
+				<table class="table">
 					<thead>
 						<tr>
 							<th colspan="3" class="titulo">Grade Horária</th>
