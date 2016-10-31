@@ -24,7 +24,7 @@ class NoticiaRequest extends FormRequest
     public function rules()
     {
         return [
-            'tituloNoticia' => 'required|string|max:60',
+            'tituloNoticia' => 'required|string|max:150',
 			'corpoNoticia'  => 'required|string',
 			'dataInicio'    => 'required|date',
 			'dataExpiracao' => 'required|date',

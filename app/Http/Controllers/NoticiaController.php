@@ -44,6 +44,9 @@ class NoticiaController extends Controller
 		return view('noticia.show')->with('noticia', $noticia);
 	}
 		
-	//protected function destroy() {
-	//}
+	protected function destroy(Noticia $noticia) {
+		$n = Noticia::find($noticia['id']);
+		$n->delete();
+		return redirect('noticia');
+	}
 }

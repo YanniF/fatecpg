@@ -19,13 +19,18 @@ body {//css para create, edit, index, show
 						margin-top: 0;
 						font-size: 14px;						
 					}
+	
+					.botoes {//show
+						margin-right: 25px;
+					}
 
 					p {
 						margin-bottom: 25px;
 						text-align: justify;
 					}
 
-					> a {
+					> a, 
+					  .botoes {
 						background-color: $menu_claro;
 						border: none;
 						font: 600 14px $fonte_principal;

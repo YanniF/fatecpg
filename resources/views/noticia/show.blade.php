@@ -20,7 +20,16 @@
 		<div class="content">
 			<div class="noticias-info">
 				<p class="data">Data de vencimento: {{ Carbon\Carbon::parse($noticia->dataExpiracao)->format('d/m/Y') }}</p>
-				<a href="{{ action('Principal@paginaInicial') }}" class="btn btn-default">Voltar</a>
+				@if(!Auth::guest())					
+
+					{!! Form::model($noticia,['url' => 'noticia/' . $noticia->id, 'method' => 'delete']) !!}
+				    	<a href="/noticia/{{ $noticia->id }}/edit" class="btn btn-default botoes">Editar</a>
+						{!! Form::submit('Apagar',['class'=>'btn btn-default botoes']) !!}
+						<a href="{{ action('NoticiaController@index') }}" class="btn btn-default botoes">Voltar</a>
+				  	{!! Form::close() !!}					
+				@else
+					<a href="{{ action('NoticiaController@index') }}" class="btn btn-default botoes">Voltar</a>
+				@endif
 			</div>			
 		</div>
 	</div>
