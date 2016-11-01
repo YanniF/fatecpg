@@ -9,11 +9,11 @@ class Noticia extends Model
     protected $table = 'noticias';
     protected $fillable = ['tituloNoticia','corpoNoticia','dataInicio','dataExpiracao', 'created_by', 'updated_by'];
 
-    public function created_by() {
+    public function criadoPor() {
         return $this->belongsTo('FatecPG\User', 'created_by', 'id');
     }
 
-    public function updated_by() {
+    public function atualizadoPor() {
         return $this->belongsTo('FatecPG\User', 'updated_by', 'id');
     }
 }

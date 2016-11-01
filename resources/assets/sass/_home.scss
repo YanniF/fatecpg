@@ -49,22 +49,23 @@ body {
 				@include make-md-column(3);
 
 				> a {
-					text-decoration: none;
-
 					> img {
 						margin: 10px auto;
 					}
-
-					> h3 {
+				}
+				> h3 {
+					text-align: center;
+					
+					a {
+						text-decoration: none;
 						font: 400 16px $fonte_principal;
 						color: $texto;							
-						text-align: center;
-
+					
 						&:hover {
 							font-weight: bold;
 						}
-					}
-				}					
+					}						
+				}				
 			}//cursos__item				
 		}//cursos__itens
 	}//cursos

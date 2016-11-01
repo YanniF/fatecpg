@@ -82,7 +82,7 @@
                                         <li><a href="https://www.sigacentropaulasouza.com.br/fatec/defaultt.html" target="_blank">Professor</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Estágio</a></li>
+                                <li><a href="http://www.fatecpg.com.br/estagio/default.aspx">Estágio</a></li>
                                 <li class="dropdown {{ (Request::is('departamentos/*') ? 'active' : '') }}">
                                     <a href="http://www.fatecpg.com.br/estagio/default.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">

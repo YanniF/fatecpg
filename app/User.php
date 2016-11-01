@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function noticiasCriadasPor() {
+        return $this->hasMany('FatecPG\Noticia', 'created_by');
+    }
+
+    public function noticiasAtualizadasPor() {
+        return $this->hasMany('FatecPG\Noticia', 'updated_by');
+    }
 }

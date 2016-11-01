@@ -1,5 +1,6 @@
 body {
-	> .login {
+	> .login,
+	> .register {
 		> .content {
 			> .formulario {
 				margin: 25px 0 50px;
@@ -17,11 +18,12 @@ body {
 
 				> .form-horizontal {
 					> .form-group {
-						> .control-label {
-							
+						> .control-label {							
 							@include make-xs-column(3);
 							@include make-sm-column(2);
-							@include make-md-column(1);					
+							@include make-md-column(1);	
+
+							color: $texto;			
 						}
 
 						> .inputs {

@@ -19,28 +19,20 @@
         </div>
         <div class="content" id="cursos__itens">
             <div class="cursos__item">
-                <a href="{{ url('/cursos/ads') }}">
-                    <img src="img/icone_ads.png" class="img-responsive" alt="Análise e Desenvolvimento de Sistemas" title="Análise e Desenvolvimento de Sistemas">
-                    <h3>Análise e Desenvolvimento de Sistemas</h3>
-                </a>
+                <a href="{{ url('/cursos/ads') }}"><img src="img/icone_ads.png" class="img-responsive" alt="Análise e Desenvolvimento de Sistemas" title="Análise e Desenvolvimento de Sistemas"></a>
+                <h3><a href="{{ url('/cursos/ads') }}">Análise e Desenvolvimento de Sistemas</a></h3>                
             </div>
             <div class="cursos__item">
-                <a href="{{ url('/cursos/comex') }}">
-                    <img src="img/icone_comex.png" class="img-responsive" alt="Comércio Exterior" title="Comércio Exterior">
-                    <h3>Comércio Exterior</h3>
-                </a>
+                <a href="{{ url('/cursos/comex') }}"><img src="img/icone_comex.png" class="img-responsive" alt="Comércio Exterior" title="Comércio Exterior"></a>
+                <h3><a href="{{ url('/cursos/comex') }}">Comércio Exterior</a></h3>                
             </div>
             <div class="cursos__item">
-                <a href="{{ url('/cursos/ge') }}">
-                    <img src="img/icone_ge.png" class="img-responsive" alt="Gestão Empresarial" title="Gestão Empresarial">
-                    <h3>Gestão Empresarial</h3>
-                </a>
+                <a href="{{ url('/cursos/ge') }}"><img src="img/icone_ge.png" class="img-responsive" alt="Gestão Empresarial" title="Gestão Empresarial"></a>
+                <h3><a href="{{ url('/cursos/ge') }}">Gestão Empresarial</a></h3>                
             </div>
             <div class="cursos__item">
-                <a href="{{ url('/cursos/pq') }}">
-                    <img src="img/icone_pq.png" class="img-responsive" alt="Processos Químicos" title="Processos Químicos">     
-                    <h3>Processos Químicos</h3>
-                </a>
+                <a href="{{ url('/cursos/pq') }}"><img src="img/icone_pq.png" class="img-responsive" alt="Processos Químicos" title="Processos Químicos"></a>     
+                <h3><a href="{{ url('/cursos/pq') }}">Processos Químicos</a></h3>
             </div>
         </div>
     </div>

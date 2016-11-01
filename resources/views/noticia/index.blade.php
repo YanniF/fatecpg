@@ -12,20 +12,20 @@
 				<a class="btn btn-default" href="{{url('noticia/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
 			@endif
 			{{-- {!! Html::ul($noticias->all()) !!} --}}
-			<table class="table">
+			<table class="table table-hover">
 				<thead>	
 					<tr>
 						<th>Título</th>
-						<th>Criado em</th>
+						<th>Publicado em</th>
 						<th>Criado por</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach($noticias as $n)
-						<tr>
-							<td><a href="noticia/{{$n->id}}">{{ $n->tituloNoticia }}</a></td>
-							<td>{{ $n->dataInicio }}</td>
-							<td>{{ $n->created_by }}</td>
+						<tr onclick="window.location.href = 'noticia/{{$n->id}}'">
+							<td>{{ $n->tituloNoticia }}</td>
+							<td>{{ Carbon\Carbon::parse($n->dataInicio)->format('d/m/Y') }}</td>
+							<td>{{  $n->criadoPor->name }}</td>
 						</tr>						
 					@endforeach
 				</tbody>

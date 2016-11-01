@@ -62,7 +62,7 @@
 			}//container
 		}//navegacao
 
-		#cursos {
+		#cursos {//pagina inicial
 			margin-top: 10px;
 
 			> .content {				
@@ -81,7 +81,7 @@
 						}
 					}
 				}
-			}//cursos__itens			
+			}//cursos__itens
 		}
 
 		footer {
@@ -105,6 +105,13 @@
 				}
 			}
 		}
+
+		> .noticias {
+			> .container {
+				margin-top: 10px;
+				font-size: 14px;
+			}
+		}
 	}//body
 }
 
@@ -124,5 +131,17 @@
 				}//content
 			}//container
 		}//footer
-	}
+
+		> .noticias {
+			> .container {
+				> .content {
+					> .noticias-info {
+						.botoes {//show
+							margin-right: 15px;
+						}
+					}
+				}
+			}
+		}//noticias
+	}//body
 }

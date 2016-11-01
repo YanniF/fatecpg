@@ -22,6 +22,24 @@ body {//css para create, edit, index, show
 	
 					.botoes {//show
 						margin-right: 25px;
+						
+						&:nth-child(4) {//o último botão não terá margin
+						    margin-right: 0;
+						}	
+					}
+
+					> .table {//index
+						margin-top: 25px;
+
+						tr {
+							cursor: pointer;							
+							td {
+								a {
+									text-decoration: none;
+									color: $texto;
+								}
+							}
+						}
 					}
 
 					p {
@@ -78,7 +96,36 @@ body {//css para create, edit, index, show
 						}
 					}
 				}
-			}//content		
+			}//content
+
+			> #apagarModal {
+				.modal-dialog {
+					//max-width: 300px;
+					.modal-content {
+						.modal-body {
+							form {
+								text-align: center;
+
+								.btn {															
+									background-color: $menu_claro;
+									border: none;
+									font: 600 16px $fonte_principal;
+									color: #fff;									
+
+									&:hover {
+										background-color: $menu_escuro;
+									}
+
+									&:nth-child(even) {//só o segundo botão terá margin
+										margin-left: 25px;
+									}
+								}
+							}
+							
+						}
+					}
+				}
+			}//apagarModal		
 		}//container	
 	}//noticias
 }
