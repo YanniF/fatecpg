@@ -13,7 +13,7 @@
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                     <label for="name" class="control-label">Nome</label>
 
-                    <div class="col-md-6">
+                    <div class="inputs">
                         <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                         @if ($errors->has('name'))
@@ -27,7 +27,7 @@
                 <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                     <label for="name" class="control-label">Usuário</label>
 
-                    <div class="col-md-6">
+                    <div class="inputs">
                         <input id="name" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
 
                         @if ($errors->has('username'))
@@ -41,7 +41,7 @@
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label for="email" class="control-label">E-Mail</label>
 
-                    <div class="col-md-6">
+                    <div class="inputs">
                         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
                         @if ($errors->has('email'))
@@ -55,7 +55,7 @@
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                     <label for="password" class="control-label">Senha</label>
 
-                    <div class="col-md-6">
+                    <div class="inputs">
                         <input id="password" type="password" class="form-control" name="password" required>
 
                         @if ($errors->has('password'))
@@ -69,7 +69,7 @@
                 <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                     <label for="password-confirm" class="control-label">Confirmar Senha</label>
 
-                    <div class="col-md-6">
+                    <div class="inputs">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
                         @if ($errors->has('password_confirmation'))

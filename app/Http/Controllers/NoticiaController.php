@@ -39,7 +39,10 @@ class NoticiaController extends Controller
 	}
 	
 	protected function update(NR\NoticiaRequest $request, Noticia $noticia) {
-		$noticia->update($request->all());
+		$req = $request->all();
+		$req['updated_by'] = \Auth::user()->id;
+		
+		$noticia->update($req);
 		return redirect('noticia');
 	}
 

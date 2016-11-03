@@ -58,6 +58,35 @@ body {//css para create, edit, index, show
 							background-color: $menu_escuro;
 						}
 					}
+
+					.titulo-btn {//index
+						h2 {
+							@include make-xs-column(6);
+							@include make-sm-column(6);
+							@include make-md-column(6);
+							padding-left: 0;
+						}
+						.btn-add {							
+							@include make-xs-column(6);
+							@include make-sm-column(6);
+							@include make-md-column(6);
+
+							margin-top: 20px;
+							padding-right: 0;
+							text-align: right;
+							
+							.btn-default {
+								background-color: $menu_claro;
+								border: none;
+								font: 600 14px $fonte_principal;
+								color: #fff;
+
+								&:hover {
+									background-color: $menu_escuro;
+								}
+							}								
+						}						
+					}
 				}
 				
 				//create e edit

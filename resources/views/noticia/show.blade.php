@@ -39,9 +39,9 @@
 	                <div class="modal-body">
 	                	<p>Deseja apagar este item?</p>
 	                    {!! Form::model($noticia,['url' => 'noticia/' . $noticia->id, 'method' => 'delete']) !!}
-						{!! Form::submit('Sim',['class'=>'btn btn-default']) !!}
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Não">
-				  	{!! Form::close() !!}
+							{!! Form::submit('Sim',['class'=>'btn btn-default']) !!}
+							<input type="button" class="btn btn-default" data-dismiss="modal" value="Não">
+				  		{!! Form::close() !!}
 	                </div>            
 	            </div>
 	        </div>
