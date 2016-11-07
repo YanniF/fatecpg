@@ -15,7 +15,7 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th colspan="3" class="titulo">Grade Horária</th>
+							<th colspan="3" class="titulo">Grade Curricular</th>
 						</tr>
 						<tr>
 							<th>1° Ciclo</th>

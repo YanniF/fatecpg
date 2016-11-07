@@ -6,7 +6,7 @@
 		<div class="content">
 	    	<h2>Notícias</h2>
 		    <div class="formulario">
-				{!! Html::ul($errors->all()) !!}
+				{!! Html::ul($errors->all(), ['class'=>'alert alert-danger']) !!}
 			  	{!! Form::open(['url' => 'noticia']) !!}
 			    	@include('partials.forms.noticia')
 				{!! Form::submit('Salvar',['class'=>'btn btn-default']) !!}

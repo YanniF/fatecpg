@@ -5,6 +5,7 @@ Auth::routes();
 Route::get('/','Principal@paginaInicial');
 
 Route::resource('noticia','NoticiaController');
+Route::resource('slider', 'SliderController');
 
 Route::get('cursos/ads', function() {
 	return view('cursos/ads');

@@ -96,31 +96,30 @@
                             </ul>
                           
                             <ul class="nav navbar-nav navbar-right">
+                                @if (Auth::guest())
+                                    <li><a href="#" data-toggle="modal" data-target="#loginModal">Login <span class="glyphicon glyphicon-user"></span></a></li>
+                                @else                                
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
 
-                            @if (Auth::guest())
-                                <li><a href="#" data-toggle="modal" data-target="#loginModal">Login <span class="glyphicon glyphicon-user"></span></a></li>
-                            @else                                
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ url('/noticia') }}">Notícias</a></li>
+                                            <li>
+                                                <a href="{{ url('/logout') }}"
+                                                    onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                    <span class="glyphicon glyphicon-log-out"></span> Logout
+                                                </a>
 
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ url('/noticia') }}">Notícias</a></li>
-                                        <li>
-                                            <a href="{{ url('/logout') }}"
-                                                onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                                <span class="glyphicon glyphicon-log-out"></span> Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ url('/logout') }}" method="post" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            @endif
+                                                <form id="logout-form" action="{{ url('/logout') }}" method="post" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                @endif
                             </ul>
                         </div>
 

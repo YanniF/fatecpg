@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use FatecPG\Http\Requests as NR;
 use FatecPG\Noticia;
+use Illuminate\Support\Facades\Auth;
 
 class NoticiaController extends Controller
 {
@@ -28,7 +29,7 @@ class NoticiaController extends Controller
 	protected function store(NR\NoticiaRequest $request) {
 		
 		$req = $request->all();		
-		$req['created_by'] = \Auth::user()->id;//inserir o usuário que cadastrou a notícia
+		$req['created_by'] = Auth::user()->id;//inserir o usuário que cadastrou a notícia
 
 		Noticia::create($req);
 		return redirect('noticia');
@@ -40,7 +41,7 @@ class NoticiaController extends Controller
 	
 	protected function update(NR\NoticiaRequest $request, Noticia $noticia) {
 		$req = $request->all();
-		$req['updated_by'] = \Auth::user()->id;
+		$req['updated_by'] = Auth::user()->id;
 		
 		$noticia->update($req);
 		return redirect('noticia');
