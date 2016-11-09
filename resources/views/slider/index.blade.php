@@ -25,7 +25,7 @@
 					<tbody>
 						@foreach($imagens as $i)
 							<tr onclick="window.location.href = 'noticia/{{$i->id}}'">
-								<td>{{ $i->imagem }}</td>
+								<td><img src="{{ $i->imagem }}" class="img-responsive"></td>
 								<td>{{ Carbon\Carbon::parse($i->created_at)->format('d/m/Y') }}</td>
 								<td>{{ $i->criadoPor->name }}</td>
 							</tr>						

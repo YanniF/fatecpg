@@ -4,7 +4,7 @@ namespace FatecPG\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Slider extends FormRequest
+class SliderRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +23,8 @@ class Slider extends FormRequest
      */
     public function rules()
     {
-        return [
-            'tituloNoticia' => 'required|image',
+         return [
+            'imagem' => 'required',//image
             'link'  => 'required|string',
         ];
     }

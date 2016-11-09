@@ -34,4 +34,12 @@ class User extends Authenticatable
     public function noticiasAtualizadasPor() {
         return $this->hasMany('FatecPG\Noticia', 'updated_by');
     }
+
+    public function sliderCriadoPor() {
+        return $this->hasMany('FatecPG\Slider', 'created_by');
+    }
+
+    public function sliderAtualizadoPor() {
+        return $this->hasMany('FatecPG\Slider', 'updated_by');
+    }
 }

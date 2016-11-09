@@ -28,7 +28,7 @@
                     <label for="name" class="control-label">Usuário</label>
 
                     <div class="inputs">
-                        <input id="name" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
+                        <input id="name" type="text" class="form-control" name="username" value="{{ old('username') }}" required>
 
                         @if ($errors->has('username'))
                             <span class="help-block">
