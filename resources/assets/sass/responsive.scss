@@ -106,7 +106,8 @@
 			}
 		}
 
-		> .noticias {
+		> .noticias, 
+		> .slider {
 			> .container {
 				margin-top: 10px;
 				font-size: 14px;
@@ -132,10 +133,12 @@
 			}//container
 		}//footer
 
-		> .noticias {
+		> .noticias,
+		> .slider {
 			> .container {
 				> .content {
-					> .noticias-info {
+					> .noticias-info,
+					> .slider-info {
 						.botoes {//show
 							margin-right: 15px;
 						}

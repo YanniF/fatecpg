@@ -42,19 +42,41 @@ class SliderController extends Controller
         return redirect('slider');
     }
 
-    public function edit() {
-    	
+    protected function edit(Slider $slider) {
+        return view('slider.edit')->with('imagem', $slider);
     }
 
-    public function update() {
-    	
+    public function update(NR\SliderRequest $request, Slider $slider) {
+    	$req = $request->all();
+
+        if($req['imagem'] != null) {
+            dd($req['imagem']);
+            $ext = strtolower(substr($_FILES['imagem']['name'], -4));
+            $novoNome = 'slider-' . date("Y.m.d-H.i.s") . $ext;
+            $dir = 'img/upload/';
+            
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $dir . $novoNome);
+            $req['imagem'] = '/' . $dir . $novoNome;
+        }
+
+        $req['updated_by'] = Auth::user()->id;
+        
+        Slider::update($req);
+        return redirect('slider');
     }
 
-    public function show() {
-    	
+    protected function show(Slider $slider) {
+        return view('slider.show')->with('imagem', $slider);
     }
 
-    public function destroy() {
-    	
+    protected function destroy(Slider $imagem) {
+        $i = Slider::find($imagem['id']);
+
+        if($i->imagem != null) {
+            $i->imagem = substr($i->imagem, 1);//para resolver o problema com as barras
+            unlink($i->imagem);//apagar a imagem
+        }
+        $i->delete();
+        return redirect('slider');
     }
 }

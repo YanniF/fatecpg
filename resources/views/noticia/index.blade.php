@@ -13,8 +13,11 @@
 							<a class="btn btn-default" href="{{url('noticia/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
 						@endif
 					</div>					
-				</div>				
-				{{-- {!! Html::ul($noticias->all()) !!} --}}
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="noticias-info table-responsive">
 				<table class="table table-hover">
 					<thead>	
 						<tr>

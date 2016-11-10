@@ -8,12 +8,31 @@ body {//css para create, edit, index, show
 			color: $texto;
 
 			> .content {
+				> .formulario {//create
+					ul {
+						padding-left: 30px;
+						margin-top: 0;
+					}
+					.form-group {
+						.btn-default {
+							background-color: $menu_claro;
+							border: none;
+							font: 600 14px $fonte_principal;
+							color: #fff;
+
+							&:hover {
+								background-color: $menu_escuro;
+							}
+						}
+					}							
+				}
+
 				> .slider-info {
 					@include make-xs-column(12);
 					@include make-sm-column(12);
 					@include make-md-column(12);
 
-					padding: 0;	
+					padding: 0;					
 					
 					> .table {//index
 						margin-top: 25px;
@@ -25,9 +44,13 @@ body {//css para create, edit, index, show
 									text-decoration: none;
 									color: $texto;
 								}
+								img {
+									max-width: 500px;
+								}
 							}
 						}
 					}
+					
 					.titulo-btn {//index
 						h2 {
 							@include make-xs-column(6);
@@ -56,6 +79,22 @@ body {//css para create, edit, index, show
 								}
 							}								
 						}						
+					}
+
+					.botoes {//show
+						margin-right: 25px;
+						background-color: $menu_claro;
+						border: none;
+						font: 600 14px $fonte_principal;
+						color: #fff;
+
+						&:hover {
+							background-color: $menu_escuro;
+						}
+					
+						&:nth-child(3) {
+						    margin-right: 0;
+						}
 					}
 				}//slider-info				
 			}//content

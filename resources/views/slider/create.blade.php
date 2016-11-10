@@ -9,8 +9,10 @@
 					{!! Html::ul($errors->all(), ['class'=>'alert alert-danger']) !!}
 					{!! Form::open(['url' => 'slider', 'files' => true]) !!} 
 				    	@include('partials.forms.slider')
-					{!! Form::submit('Salvar',['class'=>'btn btn-default']) !!}
-					<a class="btn btn-default" href="{{ action('SliderController@index') }}">Cancelar</a>
+				    	<div class="form-group">
+				    		{!! Form::submit('Salvar',['class'=>'btn btn-default']) !!}
+							<a class="btn btn-default" href="{{ action('SliderController@index') }}">Cancelar</a>
+				    	</div>						
 				  	{!! Form::close() !!}
 				</div>
 			</div>

@@ -13,7 +13,11 @@
 							<a class="btn btn-default" href="{{url('slider/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
 						@endif
 					</div>					
-				</div>		
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="slider-info table-responsive">
 				<table class="table table-hover">
 					<thead>	
 						<tr>
@@ -24,7 +28,7 @@
 					</thead>
 					<tbody>
 						@foreach($imagens as $i)
-							<tr onclick="window.location.href = 'noticia/{{$i->id}}'">
+							<tr onclick="window.location.href = 'slider/{{$i->id}}'">
 								<td><img src="{{ $i->imagem }}" class="img-responsive"></td>
 								<td>{{ Carbon\Carbon::parse($i->created_at)->format('d/m/Y') }}</td>
 								<td>{{ $i->criadoPor->name }}</td>

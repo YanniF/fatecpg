@@ -24,7 +24,7 @@ class SliderRequest extends FormRequest
     public function rules()
     {
          return [
-            'imagem' => 'required',//image
+            'imagem' => 'required|image',
             'link'  => 'required|string',
         ];
     }
