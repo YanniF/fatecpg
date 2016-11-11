@@ -23,9 +23,28 @@ class SliderRequest extends FormRequest
      */
     public function rules()
     {
-         return [
-            'imagem' => 'required|image',
-            'link'  => 'required|string',
-        ];
+       switch($this->method()) {//cada método vai ter regras diferentes
+            case 'GET':
+            case 'DELETE':
+            {
+                return [];
+            }
+            case 'POST':
+            {
+                return [
+                    'imagem' => 'required|image',
+                    'link'  => 'required|string',
+                ];
+            }
+            case 'PUT':
+            case 'PATCH':
+            {
+                return [
+                    'imagem' => 'image',
+                    'link'  => 'required|string',
+                ];
+            }
+            default: break;
+        }
     }
 }

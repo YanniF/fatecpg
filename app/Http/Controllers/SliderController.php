@@ -47,21 +47,28 @@ class SliderController extends Controller
     }
 
     public function update(NR\SliderRequest $request, Slider $slider) {
-    	$req = $request->all();
+    	
+        $req = $request->all();
+        
+        if($request->exists('imagem')) {
+            if($slider->exists('imagem')) {//apagando imagem antiga
+               $slider->imagem = substr($slider->imagem, 1);
+                unlink($slider->imagem); 
+            }
 
-        if($req['imagem'] != null) {
-            dd($req['imagem']);
             $ext = strtolower(substr($_FILES['imagem']['name'], -4));
             $novoNome = 'slider-' . date("Y.m.d-H.i.s") . $ext;
-            $dir = 'img/upload/';
-            
+            $dir = 'img/upload/';            
             move_uploaded_file($_FILES['imagem']['tmp_name'], $dir . $novoNome);
             $req['imagem'] = '/' . $dir . $novoNome;
+        }
+        else {
+            $req['imagem'] = $slider->imagem; //se a imagem for nula, o valor não irá alterar
         }
 
         $req['updated_by'] = Auth::user()->id;
         
-        Slider::update($req);
+        $slider->update($req);
         return redirect('slider');
     }
 
