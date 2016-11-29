@@ -5,9 +5,9 @@
     <div class="container" id="slider">
         <div class="content">
             <div id="slider__navegacao" class="owl-carousel">
-                <div class="item"><span id="img1"><img src="img/slider1.png" class="img-responsive" alt="Imagem 1"></span></div>
-                <div class="item"><span id="img2"><img src="img/slider2.png" class="img-responsive" alt="Imagem 2"></span></div>
-                <div class="item"><span id="img3"><img src="img/slider3.png" class="img-responsive" alt="Imagem 3"></span></div>
+                @foreach($slider as $s)
+                    <div class="item"><a href="{{url($s->link)}}"><img src="{{$s->imagem}}" class="img-responsive"></a></div>
+                @endforeach
             </div>
         </div>              
     </div>

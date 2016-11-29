@@ -12,19 +12,6 @@ $('#slider__navegacao').owlCarousel({
     smartSpeed:450
 });
 
-//melhorar
-$('#slider').on('click', '#img1', function () {
-    window.location.href = "http://www.fatecpg.com.br";
-});
-
-$('#slider').on('click', '#img2', function () {
-    window.location.href = "http://www.fatecpg.com.br";
-});
-
-$('#slider').on('click', '#img3', function () {
-    window.location.href = "http://www.fatecpg.com.br";
-});
-
 $(window).scroll(function() {
     var scrollTopAtual = ($(this).scrollTop());
 

@@ -63,7 +63,7 @@ class SliderController extends Controller
             $req['imagem'] = '/' . $dir . $novoNome;
         }
         else {
-            $req['imagem'] = $slider->imagem; //se a imagem for nula, o valor não irá alterar
+            $req['imagem'] = $slider->imagem;//se a imagem for nula, o valor não irá alterar
         }
 
         $req['updated_by'] = Auth::user()->id;
