@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group">
                     <div class="botao">
-                        <button type="submit" class="btn btn-default">Entrar</button>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
                         <a href="{{ url('/password/reset') }}">Esqueceu sua senha?</a>
                     </div>
                 </div>

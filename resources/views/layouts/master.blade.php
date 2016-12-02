@@ -45,7 +45,7 @@
     </header>
 
     <!-- Menu -->
-    <div id="navegacao">
+    <div class="navegacao">
         <div class="container">
             <div class="content">
                 <div class="navegacao-content">
@@ -163,7 +163,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="botao">
-                                    <button type="submit" class="btn btn-default btn-block">Entrar</button>
+                                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                                 </div>
                             </div>                    
                         </form>
@@ -180,7 +180,7 @@
     <footer>
         <div class="container">
             <div class="content">
-                <div class="redes_sociais">
+                <div class="redes-sociais">
                     <a href="https://www.facebook.com/fatecpg" target="_blank">
                         <img src="{{ asset('img/icone_facebook.png') }}" class="img-responsive" alt="Facebook Fatec PG" title="Facebook Fatec PG">
                     </a>
@@ -194,7 +194,7 @@
                 </div>          
             </div><!-- content -->
             <div class="content">
-                <div class="mapa_cursos">
+                <div class="mapa-cursos">
                     <h4><a href="#">Cursos</a></h4>
                     <ul>
                         <li><a href="{{ url('/cursos/ads') }}">Análise de Desenvolvimento de Sistemas</a></li>
@@ -212,13 +212,14 @@
                         <li><a href="#">Lorem Ipsum</a></li>
                     </ul>
                 </div>  
-                <div class="mapa_dar_nome">
-                    <h4><a href="#">Lorem Ipsum</a></h4>
+                <div class="departamentos">
+                    <h4><a href="#">Departamentos</a></h4>
                     <ul>
-                        <li><a href="#">Lorem Ipsum</a></li>
-                        <li><a href="#">Lorem Ipsum</a></li>
-                        <li><a href="#">Lorem Ipsum</a></li>
-                        <li><a href="#">Lorem Ipsum</a></li>
+                        <li><a href="#">Biblioteca</a></li>
+                        <li><a href="#">Coordenação</a></li>
+                        <li><a href="#">Direção</a></li>
+                        <li><a href="#">DTI</a></li>
+                        <li><a href="#">Secretaria</a></li>
                     </ul>
                 </div>
                 <div class="maps">

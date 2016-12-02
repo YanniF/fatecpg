@@ -1,14 +1,14 @@
-#slider {	
-	#slider-navegacao {
+.slider-home {
+	.slider-navegacao {
 		margin: 15px 0;
 
 		.item {
-			img{			
-				display: block;	
-				width: 100%;	
+			img{
+				display: block;
+				width: 100%;
 				height: auto;
-				cursor: pointer;		
-			}	
+				cursor: pointer;
+			}
 		}
 		.owl-controls {
 			margin-top: 5px;
@@ -16,27 +16,22 @@
 	}
 }//slider
 
-#cursos {		
-	margin-top: 50px;	
-					
+.cursos-home {
+	margin-top: 50px;
+
 	h2 {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
 		@include make-md-column(12);
-		
+
 		text-align: center;
 		font-size: 30px;
-		font-weight: bold;
 		color: $cor-titulo;
 		margin: 0 0 25px;
 	}
 
-	> #cursos-itens {
+	.cursos-itens {
 		margin-bottom: 50px;
 
-		> .cursos-item {
-			@include make-xs-column(12);
-			@include make-sm-column(6);
+		.cursos-item {
 			@include make-md-column(3);
 
 			img {
@@ -45,42 +40,37 @@
 			h3 {
 				text-align: center;
 				margin-bottom: 0;
-				
-				a {					
+
+				a {
 					font-size: 16px;
 					font-weight: normal;
 					color: $cor-texto;
-				
+
 					&:hover {
 						font-weight: bold;
 					}
-				}						
-			}				
-		}//cursos-item				
+				}
+			}
+		}//cursos-item
 	}//cursos-itens
 }//cursos
 
-#noticias {
+.noticias-home {
 	margin-bottom: 50px;
-					
+
 	h2 {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
 		@include make-md-column(12);
 
-		margin: 0;					
+		margin: 0;
 		text-align: center;
 		font-size: 30px;
-		
+
 		a {
 			color: $cor-titulo;
 		}
 	}
 
-	
 	.nenhuma-noticia {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
 		@include make-md-column(12);
 
 		p {
@@ -91,48 +81,42 @@
 	}
 
 	.noticias-item{
-		> .data {
-			@include make-xs-column(12);
-			@include make-sm-column(2);
+		.data {
 			@include make-md-column(2);
 
 			text-align: right;
 			margin-top: 28px;
-			padding-left: 0;						
+			padding-left: 0;
 			font-weight: bold;
 		}
 
-		> .noticia {
-			@include make-xs-column(12);
-			@include make-sm-column(10);
+		.noticia {
 			@include make-md-column(10);
 
 			padding-right: 0;
-			
-			> h3 {
+
+			h3 {
 				margin: 25px 0 0 0;
 				font-size: 22px;
 
-				> a {
+				a {
 					color: $cor-texto;
-				}							
-			}						
+				}
+			}
 
-			> p {								
+			p {
 				text-align: justify;
 				margin: 5px 0;
 			}
 
-			> span {
+			span {
 				font-size: 14px;
 				color: $cor-titulo;
-				
-				a {
-					&:hover {
-						font-weight: bold;				
-					}
-				}							
+
+				a:hover {
+					font-weight: bold;
+				}
 			}
 		}//noticia
 	}//noticias-item
-}//noticias		
+}//noticias

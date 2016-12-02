@@ -1,130 +1,63 @@
-body {//css para create, edit, index, show
-	> .slider {
-		> .container {
-			margin-top: 25px;
-			margin-bottom: 50px;
-			font-family: $fonte-principal;
-			font-size: 16px;
-			color: $cor-texto;
+//css para create, edit, index, show
+.slider {
+	.container {
+		margin-top: 25px;
+		margin-bottom: 50px;
+		
+		.formulario {//create
+			ul {
+				padding-left: 30px;
+				margin-top: 0;
+			}											
+		}
 
-			> .content {
-				> .formulario {//create
-					ul {
-						padding-left: 30px;
-						margin-top: 0;
+		.slider-info {
+			@include make-xs-column(12);
+			@include make-sm-column(12);
+			@include make-md-column(12);
+
+			padding: 0;					
+			
+			.table {//index
+				margin-top: 25px;
+
+				tr {
+					cursor: pointer;							
+					a {						
+						color: $cor-texto;
 					}
-					.form-group {
-						.btn-default {
-							background-color: $cor-clara;
-							border: none;
-							font: 600 14px $fonte-principal;
-							color: #fff;
-
-							&:hover {
-								background-color: $cor-escura;
-							}
-						}
-					}							
+					img {
+						max-width: 500px;
+					}
 				}
+			}
+			
+			.titulo-btn {//index
+				h2 {
+					@include make-xs-column(6);
+					@include make-sm-column(6);
+					@include make-md-column(6);
 
-				> .slider-info {
-					@include make-xs-column(12);
-					@include make-sm-column(12);
-					@include make-md-column(12);
+					padding-left: 0;
+				}
+				.btn-add {							
+					@include make-xs-column(6);
+					@include make-sm-column(6);
+					@include make-md-column(6);
 
-					padding: 0;					
-					
-					> .table {//index
-						margin-top: 25px;
+					margin-top: 20px;
+					padding-right: 0;
+					text-align: right;				
+				}						
+			}
 
-						tr {
-							cursor: pointer;							
-							td {
-								a {
-									text-decoration: none;
-									color: $cor-texto;
-								}
-								img {
-									max-width: 500px;
-								}
-							}
-						}
-					}
-					
-					.titulo-btn {//index
-						h2 {
-							@include make-xs-column(6);
-							@include make-sm-column(6);
-							@include make-md-column(6);
-
-							padding-left: 0;
-						}
-						.btn-add {							
-							@include make-xs-column(6);
-							@include make-sm-column(6);
-							@include make-md-column(6);
-
-							margin-top: 20px;
-							padding-right: 0;
-							text-align: right;
+			.botoes {//show
+				margin-right: 25px;
 							
-							.btn-default {
-								background-color: $cor-clara;
-								border: none;
-								font: 600 14px $fonte-principal;
-								color: #fff;
-
-								&:hover {
-									background-color: $cor-escura;
-								}
-							}								
-						}						
-					}
-
-					.botoes {//show
-						margin-right: 25px;
-						background-color: $cor-clara;
-						border: none;
-						font: 600 14px $fonte-principal;
-						color: #fff;
-
-						&:hover {
-							background-color: $cor-escura;
-						}
-					
-						&:nth-child(3) {
-						    margin-right: 0;
-						}
-					}
-				}//slider-info				
-			}//content
-
-			> #apagarModal {
-				.modal-dialog {
-					.modal-content {
-						.modal-body {
-							form {
-								text-align: center;
-
-								.btn {															
-									background-color: $cor-clara;
-									border: none;
-									font: 600 16px $fonte-principal;
-									color: #fff;									
-
-									&:hover {
-										background-color: $cor-escura;
-									}
-
-									&:nth-child(even) {
-										margin-left: 25px;
-									}
-								}
-							}							
-						}
-					}
+				&:nth-child(3) {
+				    margin-right: 0;
 				}
-			}//apagarModal		
-		}//container	
-	}//noticias
-}
+			}
+		}//slider-info				
+	}//container	
+}//slider

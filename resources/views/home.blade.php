@@ -2,9 +2,9 @@
 @section('title', 'Página Inicial')
 @section('content')
 <!-- Slider --> 
-    <div class="container" id="slider">
+    <div class="container slider-home">
         <div class="content">
-            <div id="slider-navegacao" class="owl-carousel">
+            <div class="slider-navegacao" class="owl-carousel">
                 @foreach($slider as $s)
                     <div class="item"><a href="{{url($s->link)}}"><img src="{{$s->imagem}}" class="img-responsive"></a></div>
                 @endforeach
@@ -13,11 +13,11 @@
     </div>
 
     <!-- Cursos -->
-    <div class="container" id="cursos">
+    <div class="container cursos-home">
         <div class="content">
             <h2>Cursos oferecidos na Fatec PG</h2>
         </div>
-        <div class="content" id="cursos-itens">
+        <div class="content cursos-itens">
             <div class="cursos-item">
                 <a href="{{ url('/cursos/ads') }}"><img src="img/icone_ads.png" class="img-responsive" alt="Análise e Desenvolvimento de Sistemas" title="Análise e Desenvolvimento de Sistemas"></a>
                 <h3><a href="{{ url('/cursos/ads') }}">Análise e Desenvolvimento de Sistemas</a></h3>                
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Notícias -->   
-    <div class="container" id="noticias">
+    <div class="container noticias-home">
         <div class="content">
             <h2><a href="/noticia">Notícias</a></h2>
         </div>

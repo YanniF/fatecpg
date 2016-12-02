@@ -1,0 +1,221 @@
+@media screen and (max-width: $resolucao-md) {///sm
+
+	.container {
+		font-size: 14px;
+	}
+
+	header {
+		.logoFatec {
+			@include make-sm-column(12);
+
+			img {
+				margin: 0 auto;
+			}
+		}
+
+		.logoCPS {
+			display: none;
+		}
+
+		.logoGoverno {
+			display: none;
+		}
+	}
+
+	.modal {
+		.control-label {
+			@include make-sm-column(3);
+		}
+		.inputs {
+			@include make-sm-column(9);
+		}
+		.check,
+		.botao {
+			@include make-sm-column(12);
+		}
+	}
+
+	.cursos-home {
+		margin-top: 10px;
+
+		h2 {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		.cursos-itens {
+			margin-bottom: 20px;
+
+			.cursos-item {
+				@include make-sm-column(6);
+				
+				margin-bottom: 15px;
+
+				img {
+					margin-top: 0;
+				}
+			}
+		}//cursos-itens
+	}
+
+	.noticias-home {
+		.data {
+			@include make-sm-column(2);
+		}
+		.noticia {
+			@include make-sm-column(10);
+		}
+	}
+
+	footer {
+		.container {
+			.redes-sociais {
+				@include make-sm-column(3);
+			}
+			.endereco {
+				@include make-sm-column(9);
+			}
+			.mapa-cursos {
+				@include make-sm-column(3);
+			}
+			.mapa_dar_nome,
+			.departamentos {
+				@include make-sm-column(2);
+			}
+			.maps {
+				@include make-sm-column(5);
+			}
+
+			h4 {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}//footer
+
+	.ads,
+	.comex,
+	.ge,
+	.pq {
+		.content {
+			.curso-info {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.noticias,
+	.slider {
+		> .container {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	footer {
+		.container {
+			.content {
+				.redes_sociais {
+					a {
+						img {
+							width: 50%;
+							height: auto;
+						}
+					}
+				}
+			}//content
+		}//container
+	}//footer
+
+	.noticias,
+	.slider {
+		.container {
+			.content {
+				.noticias-info,
+				.slider-info {
+					.botoes {//show
+						margin-right: 15px;
+					}
+				}
+			}
+		}
+	}//noticias
+}
+
+@media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
+	.navegacao {
+		.container {
+			.navegacao-content {
+				.navbar-collapse {
+					ul.navbar-nav {
+						padding-left: 15px;
+
+						li {
+							&.active {
+								a {
+									border: none;
+								}
+							}
+
+							a {
+								font-size: 14px;
+
+								&:hover {
+									border: none;
+								}
+							}
+
+							ul.dropdown-menu {
+								li {
+									a {
+										font-size: 12px;
+										padding-left: 20px;
+									}
+								}
+							}
+						}
+					}//ul.navbar-nav
+				}//navbar-collapse
+			}//navegacao-content
+		}//container
+	}//navegacao
+	
+	.cursos-home {
+		.cursos-item {
+			@include make-xs-column(12);
+		}
+	}
+
+	.noticias {
+		.data {
+			@include make-xs-column(12);
+		}
+		.noticia {
+			@include make-xs-column(12);
+		}
+	}
+
+	footer {
+		.container {
+			.redes-sociais {
+				@include make-xs-column(4);
+			}
+			.endereco {
+				@include make-xs-column(8);
+			}
+			.mapa-cursos {
+				@include make-xs-column(12);
+			}
+			.mapa_dar_nome,
+			.departamentos {
+				@include make-xs-column(12);
+			}
+			.maps {
+				@include make-xs-column(12);
+			}
+		}
+	}//footer
+}

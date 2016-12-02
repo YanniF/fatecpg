@@ -10,7 +10,7 @@
 					<h2>Slider</h2>
 					<div class="btn-add">
 						@if(!Auth::guest())
-							<a class="btn btn-default" href="{{url('slider/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
+							<a class="btn btn-primary" href="{{url('slider/create')}}"><span class="glyphicon glyphicon-plus"></span> Adicionar</a>
 						@endif
 					</div>					
 				</div>

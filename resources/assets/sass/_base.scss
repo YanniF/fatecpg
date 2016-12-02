@@ -6,7 +6,7 @@
 	a {
 		outline: none;
 		text-decoration: none;
-		
+
 		img {
 			border: none;
 		}
@@ -18,27 +18,43 @@
 		}
 	}
 
-	.btn-default {
+	.btn-primary {
 		background-color: $cor-clara;
 		border: none;
 		font-weight: bold;
-		color: #fff;
+		color: $cor-texto-clara;
 
 		&:hover {
 			background-color: $cor-escura;
 		}
 	}
+
+	#apagarModal {
+		font-weight: normal;
+
+		p {
+			margin-bottom: 25px;
+		}
+
+		form {
+			text-align: center;
+
+			.btn:nth-child(even) {//só o segundo botão terá margin
+				margin-left: 25px;
+			}
+		}
+	}//apagarModal
 }
 
 .content {
 	@include make-row();
 	padding: 0;
-	margin: 0;		
+	margin: 0;
 }
 
-.fixed {
+.fixed {//menu fixo
 	position: fixed;
-	top: 0;	
-	z-index: 998;	
+	top: 0;
+	z-index: 998;
 }
 

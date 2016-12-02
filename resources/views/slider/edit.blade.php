@@ -15,8 +15,8 @@
 			  		</p>
 			    	@include('partials.forms.slider')
 			    	<div class="form-group">			    		
-			    		{!! Form::submit('Salvar',['class'=>'btn btn-default']) !!}
-					<a class="btn btn-default" href="{{ action('SliderController@index') }}">Cancelar</a>
+			    		{!! Form::submit('Salvar',['class'=>'btn btn-primary']) !!}
+					<a class="btn btn-primary" href="{{ action('SliderController@index') }}">Cancelar</a>
 			    	</div>					
 			  	{!! Form::close() !!}
 	    	</div>

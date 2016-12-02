@@ -21,10 +21,10 @@
 			<div class="noticias-info">
 				<p class="data">Data de vencimento: {{ Carbon\Carbon::parse($noticia->dataExpiracao)->format('d/m/Y') }}</p>
 				@if(!Auth::guest())
-					<a href="/noticia/{{ $noticia->id }}/edit" class="btn btn-default botoes">Editar</a>
-					<a href="#" data-toggle="modal" data-target="#apagarModal" class="btn btn-default botoes">Apagar</a>
+					<a href="/noticia/{{ $noticia->id }}/edit" class="btn btn-primary botoes">Editar</a>
+					<a href="#" data-toggle="modal" data-target="#apagarModal" class="btn btn-primary botoes">Apagar</a>
 				@endif
-				<a href="{{ action('NoticiaController@index') }}" class="btn btn-default botoes">Voltar</a>
+				<a href="{{ action('NoticiaController@index') }}" class="btn btn-primary botoes">Voltar</a>
 			</div>			
 		</div>
 
@@ -39,8 +39,8 @@
 	                <div class="modal-body">
 	                	<p>Deseja apagar este item?</p>
 	                    {!! Form::model($noticia,['url' => 'noticia/' . $noticia->id, 'method' => 'delete']) !!}
-							{!! Form::submit('Sim',['class'=>'btn btn-default']) !!}
-							<input type="button" class="btn btn-default" data-dismiss="modal" value="Não">
+							{!! Form::submit('Sim',['class'=>'btn btn-primary']) !!}
+							<input type="button" class="btn btn-primary" data-dismiss="modal" value="Não">
 				  		{!! Form::close() !!}
 	                </div>            
 	            </div>

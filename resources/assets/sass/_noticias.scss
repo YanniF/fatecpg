@@ -87,18 +87,6 @@
 				@include make-md-column-offset(2);
 				@include make-md-column-pull(1);				
 			}
-		}
-
-		> #apagarModal {
-			font-weight: normal;
-			
-			form {				
-				text-align: center;
-				
-				.btn:nth-child(even) {//só o segundo botão terá margin
-					margin-left: 25px;
-				}
-			}
-		}//apagarModal		
+		}				
 	}//container	
 }//noticias

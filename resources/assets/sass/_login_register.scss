@@ -3,51 +3,80 @@
 	.formulario {
 		margin: 25px 0 50px;
 		
-		> h2 {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
+		h2 {
 			@include make-md-column(12);
 				
 			padding-left: 0;
 			color: $cor-titulo;					
 		}
 		
-		.control-label {							
-			@include make-xs-column(3);
-			@include make-sm-column(2);
+		.control-label {
 			@include make-md-column(1);			
 		}
 
 		.inputs {
-			@include make-xs-column(9);
-			@include make-sm-column(10);
 			@include make-md-column(5);							
 			@include make-md-column-offset(6);
 			@include make-md-column-pull(6);							
 		}
 
-		.check {
-			@include make-xs-column(12);
-			@include make-sm-column(10);							
-			@include make-sm-column-offset(2);
+		.check {						
 			@include make-md-column(11);
 			@include make-md-column-offset(1);							
 		}
 
-		.botao {			
-			@include make-xs-column(12);
-			@include make-sm-column(10);							
-			@include make-sm-column-offset(2);
+		.botao {						
 			@include make-md-column(11);
 			@include make-md-column-offset(1);
 			
 			.btn {
 				margin-right: 25px;
 										
-				&:nth-child(3) {//o último botão não terá margin
+				&:nth-child(3) {
 				    margin-right: 0;
 				}
 			}
 		}
 	}	
+}
+
+@media screen and (max-width: $resolucao-md) {
+	.login,
+	.register {
+		.control-label {
+			@include make-sm-column(2);
+		}
+		.inputs {
+			@include make-sm-column(10);
+		}
+		.check {
+			@include make-sm-column(10);
+			@include make-sm-column-offset(2);
+		}
+		.botao {
+			@include make-sm-column(10);
+			@include make-sm-column-offset(2);
+		}
+	}
+}
+
+@media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
+	.login,
+	.register {
+		.control-label {
+			@include make-xs-column(3);
+			text-align: right;
+		}
+		.inputs {
+			@include make-xs-column(9);
+		}
+		.check {
+			@include make-xs-column(12);
+		}
+		.botao {
+			@include make-xs-column(12);
+
+
+		}		
+	}
 }

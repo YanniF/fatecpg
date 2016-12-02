@@ -3,54 +3,48 @@ header {
 
 	> .content {
 		margin-left: 0;
-		margin-right: 0;			
+		margin-right: 0;
 		margin-top: 5px;
-		
+
 		height: 80px;
 
 		.logoFatec {
-			@include make-xs-column(12);
-			@include make-sm-column(4);
 			@include make-md-column(4);
-			
+
 			padding: 0;
 		}
 
 		.logoCPS {
-			@include make-xs-column(0);
-			@include make-sm-column(3);
 			@include make-md-column(4);
-			
-			img {					
-				padding-left: 20px;				
-			}				
+
+			img {
+				padding-left: 20px;
+			}
 		}
 
 		.logoGoverno {
-			@include make-xs-column(0);
-			@include make-sm-column(5);
 			@include make-md-column(4);
-			
+
 			padding-right: 0;
 
-			> img {					
-				padding: 5px 0 0 25px;				
+			> img {
+				padding: 5px 0 0 25px;
 			}
 		}
 	}
 }//header
 
-#navegacao {
+.navegacao {
 	background-color: $cor-clara;
 	width: 100%;
-	
+
 	.content {
 		margin-left: 0;
 		margin-right: 0;
 
 		.navegacao-content {
 			@include make-md-column(12);
-			
+
 			padding: 0;
 
 			.navbar {
@@ -58,68 +52,68 @@ header {
 				border: none;
 				background-color: $cor-clara;
 				margin-bottom: 0;
-				
+
 				.navbar-toggle {
-					border-color:#FFFFFF;
+					border-color:$cor-texto-clara;
 
 					&:hover, &:focus {
 						background-color: $cor-escura;
 					}
 
 					.icon-bar {
-						background-color:#FFFFFF;
+						background-color:$cor-texto-clara;
 					}
 				}
 
 				.navbar-collapse {
 					border: none;
 					padding-top: 2px;
-					padding-left: 0;				
-					
+					padding-left: 0;
+
 					li {
 						background-color: $cor-clara;
 					    box-shadow: 0 0 0 2px $cor-clara;
 					    list-style: none;
 
-						&.active{																	
-							a {										
-								background-color: $cor-escura;		
+						&.active{
+							a {
+								background-color: $cor-escura;
 								box-shadow: 0 0 0 2px $cor-escura;
-						    	border-bottom: 3px solid #FFFFFF;
-						    	height: 46px;	
-						    	z-index: 999;						
-							}									
+						    	border-bottom: 3px solid $cor-texto-clara;
+						    	height: 46px;
+						    	z-index: 999;
+							}
 						}
 
 						a {
-							color: #FFFFFF;	
+							color: $cor-texto-clara;
 							font: 400 16px $fonte-principal;
-							height: 46px;	
+							height: 46px;
 							background-color: $cor-clara;
-							transition: all 0.3s linear; 
+							transition: all 0.3s linear;
 
 							&:hover {
 								background-color: $cor-escura;
 							    box-shadow: 0 0 0 2px $cor-escura;
-							    border-bottom: 3px solid #FFFFFF;
+							    border-bottom: 3px solid $cor-texto-clara;
 							    z-index: 999;
 							    transition: all 0.2s linear;
 							}
 
-							.glyphicon {	
+							.glyphicon {
 								font-size: 14px;
 							}
 						}
 
 						> ul.dropdown-menu {
-							box-shadow: none;	
+							box-shadow: none;
 							border-radius: 0;
 							border: none;
 							background-color: $cor-clara;
 							padding: 0 2px;
 
 							li {
-								background-color: $cor-clara;											
+								background-color: $cor-clara;
 								margin-top: 3px;
 
 								a {
@@ -130,105 +124,82 @@ header {
 							}
 						}
 					}//li
-					
+
 				}//navbar-collapse
 			}//navbar
-		}//navegacao-content		
-	}//content				
-			
+		}//navegacao-content
+	}//content
 }//navgeção
 
 .modal {
-	font: 600 16px $fonte-principal;
-
-	.modal-header {		
+	.modal-header {
 		text-align: center;
 		font-size: 18px;
 	}
-			
+
 	.control-label {
-		@include make-xs-column(3);
-		@include make-sm-column(3);
 		@include make-md-column(3);
 
 	}
 	.inputs {
-		@include make-xs-column(9);
-		@include make-sm-column(9);
 		@include make-md-column(9);
 
 		font-weight: normal;
 	}
-	.check {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
-		@include make-md-column(12);
-	}
-
+	.check,
 	.botao {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
-		@include make-md-column(12);		
+		@include make-md-column(12);
 	}
 }
 
 footer {
-	background-color: $cor-escura;	
-		
+	background-color: $cor-escura;
+
 	.content {
 		margin-top: 25px;
 		margin-bottom: 25px;
 		font-size: 14px;
-		font-weight: 300;		
-		color: #FFFFFF;					
-	
-		a {					
-			color: #FFFFFF;
+		font-weight: 300;
+		color: $cor-texto-clara;
+
+		a {
+			color: $cor-texto-clara;
 
 			&:hover {
 				font-weight: bold;
-			}														
+			}
 		}
 
-		.redes_sociais {
-			@include make-xs-column(4);
-			@include make-sm-column(3);
+		.redes-sociais {
 			@include make-md-column(2);
 
 			padding: 0;
 
 			img {
 				float: left;
-				display: inline;		
-			}					
+				display: inline;
+			}
 		}
 
 		.endereco {
-			@include make-xs-column(8);
-			@include make-sm-column(9);
 			@include make-md-column(4);
 			@include make-md-column-offset(6);
-			
+
 			p {
 				text-align: center;
-			}			
+			}
 		}
 
-		.mapa_cursos {
-			@include make-xs-column(12);
-			@include make-sm-column(3);
+		.mapa-cursos {
 			@include make-md-column(3);
 		}
 
-		.mapa_dar_nome {
-			@include make-xs-column(12);
-			@include make-sm-column(2);
+		.mapa_dar_nome,
+		.departamentos {
 			@include make-md-column(2);
 		}
 
 		.maps {
-			@include make-xs-column(12);
-			@include make-sm-column(5);
 			@include make-md-column(4);
 			@include make-md-column-offset(1);
 		}
@@ -238,24 +209,24 @@ footer {
 
 			a {
 				font-size: 18px;
-			}				
+			}
 		}
 
 		ul {
 			padding-left: 0px;
 
 			li {
-				list-style: none;										
+				list-style: none;
 			}
 		}
-		
+
 		.desenvolvido {
 			@include make-xs-column(12);
 			@include make-sm-column(12);
 			@include make-md-column(12);
-			
+
 			margin: 10px;
 			text-align: center;
-		}		
+		}
 	}
 }//footer
