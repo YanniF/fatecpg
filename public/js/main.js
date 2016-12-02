@@ -1,4 +1,4 @@
-$('#slider__navegacao').owlCarousel({
+$('#slider-navegacao').owlCarousel({
     dots:true,
     loop:true,
     dots:true,

@@ -82,9 +82,9 @@
 
                 <div class="form-group">
                     <div class="botao">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button type="reset" class="btn btn-primary">Limpar</button>
-                        <a href="{{ action('Principal@paginaInicial') }}" class="btn btn-primary">Cancelar</a>
+                        <button type="submit" class="btn btn-default">Cadastrar</button>
+                        <button type="reset" class="btn btn-default">Limpar</button>
+                        <a href="{{ action('Principal@paginaInicial') }}" class="btn btn-default">Cancelar</a>
                     </div>
                 </div>
             </form>

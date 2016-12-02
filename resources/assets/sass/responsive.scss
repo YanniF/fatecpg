@@ -21,7 +21,7 @@
 		> #navegacao {
 			> .container {
 				> .content {
-					> #navegacao__content {
+					> #navegacao-content {
 						padding: 0;
 
 						.navbar {
@@ -57,7 +57,7 @@
 								}//ul.navbar-nav
 							}//navbar-collapse
 						}//navbar
-					}//navegacao__content
+					}//navegacao-content
 				}//content
 			}//container
 		}//navegacao
@@ -72,16 +72,16 @@
 				}
 			}
 
-			#cursos__itens {
+			#cursos-itens {
 				margin-bottom: 20px;
-				.cursos__item {
+				.cursos-item {
 					a {
 						img {
 							margin-top: 0;
 						}
 					}
 				}
-			}//cursos__itens
+			}//cursos-itens
 		}
 
 		footer {

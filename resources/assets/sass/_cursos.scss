@@ -1,50 +1,35 @@
-body {
-	> .ads, 
-	> .comex,
-	> .ge,
-	> .pq {		
-		margin-bottom: 50px;
+.ads, 
+.comex,
+.ge,
+.pq {
+	margin-bottom: 50px;
 
-		> .content {
-			.curso-info {
+	.curso-info {
+		@include make-xs-column(12);
+		@include make-sm-column(12);
+		@include make-md-column(12);
+		
+		margin-top: 25px;
+		padding: 0;
+		text-align: justify;
+		
+		.table {
+			margin-bottom: 0;
+							
+			.titulo {
+				font-size: 18px;
+			}
 
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(12);
-				
-				margin-top: 25px;
-				padding: 0;				
-				font-size: 16px;
-				font-family: $fonte_principal;
-				text-align: justify;
-				color: $texto;
-				
-				ul {
-					li {
-						list-style: square;
-					}
+			th {
+				text-align: center;
+			}
+
+			td {
+				text-align: left;
+				span {
+					font-size: 12px;
 				}
-
-				.table {
-					margin-bottom: 0;				
-					tr {
-						.titulo {
-							font-size: 18px;
-						}
-
-						th {
-							text-align: center;
-						}
-
-						td {
-							text-align: left;
-							span {
-								font-size: 12px;
-							}
-						}
-					}															
-				}
-			}//conteudo
-		}//content
-	}//cursos
+			}															
+		}
+	}//curso-info
 }

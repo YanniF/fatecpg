@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="{{ asset('css/plugins/owl-carousel/owl.theme.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/plugins/owl-carousel/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 </head>
 <body>
     <header class="container">
@@ -49,7 +48,7 @@
     <div id="navegacao">
         <div class="container">
             <div class="content">
-                <div id="navegacao__content">
+                <div class="navegacao-content">
                     <nav class="navbar navbar-default">
                         
                         <!-- For better mobile display -->
@@ -125,57 +124,60 @@
                         </div>
 
                     </nav>
-                </div><!-- navegacao__content -->
+                </div><!-- navegacao-content -->
             </div><!-- content -->
         </div><!-- container -->
     </div><!-- Navegação -->
 
     <!-- Modal -->
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-sm">
+    <div class="container">
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
 
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Login</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="form-horizontal" role="form" method="post" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label class="control-label" for="username">Usuário:</label>
-                            <div class="inputs">
-                                <input type="text" class="form-control" name="username" id="username" maxlength="30" placeholder="Matrícula" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="password">Senha:</label>
-                            <div class="inputs">
-                                <input type="password" class="form-control" name="password" id="password" maxlength="30" placeholder="Senha" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="check">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="remember"> Lembrar</label>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form" method="post" action="{{ url('/login') }}">
+                            {{ csrf_field() }}
+                            <div class="form-group">
+                                <label class="control-label" for="username">Usuário:</label>
+                                <div class="inputs">
+                                    <input type="text" class="form-control" name="username" id="username" maxlength="30" placeholder="Matrícula" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="botao">
-                                <button type="submit" class="btn btn-default btn-block">Entrar</button>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Senha:</label>
+                                <div class="inputs">
+                                    <input type="password" class="form-control" name="password" id="password" maxlength="30" placeholder="Senha" required>
+                                </div>
                             </div>
-                        </div>                    
-                    </form>
-                </div>            
+                            <div class="form-group">
+                                <div class="check">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" name="remember"> Lembrar</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="botao">
+                                    <button type="submit" class="btn btn-default btn-block">Entrar</button>
+                                </div>
+                            </div>                    
+                        </form>
+                    </div>            
+                </div><!--modal-content-->
             </div>
         </div>
     </div>
+   
 
     @yield('content')
 
     <!-- Rodapé -->
-    <footer id="rodape">
+    <footer>
         <div class="container">
             <div class="content">
                 <div class="redes_sociais">
@@ -191,8 +193,8 @@
                     Tel: (13) 3591-1303 / (13) 3591-6968</p>
                 </div>          
             </div><!-- content -->
-            <div class="content" id="mapa">
-                <div id="mapa_cursos">
+            <div class="content">
+                <div class="mapa_cursos">
                     <h4><a href="#">Cursos</a></h4>
                     <ul>
                         <li><a href="{{ url('/cursos/ads') }}">Análise de Desenvolvimento de Sistemas</a></li>
@@ -219,13 +221,14 @@
                         <li><a href="#">Lorem Ipsum</a></li>
                     </ul>
                 </div>
-                <div id="maps">
+                <div class="maps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.724778682134!2d-46.41314740414381!3d-24.00549399093612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1db2fb42ff39%3A0x2f5e04fdcb8016f8!2sPra%C3%A7a+19+de+Janeiro%2C+144+-+Boqueir%C3%A3o%2C+Praia+Grande+-+SP%2C+11700-130!5e0!3m2!1spt-BR!2sbr!4v1464723859650" width="100%" height="135" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>              
             </div><!-- content -->
-            <div class="content" id="desenvolvido">
-                <div>&copy; 2016 - Faculdade de Tecnologia de Praia Grande - Desenvolvido por <a href="/">DTI</a>
-                </div>
+            <div class="content">
+                <div class="desenvolvido">
+                    <div>&copy; 2016 - Faculdade de Tecnologia de Praia Grande - Desenvolvido por <a href="/">DTI</a></div>
+                </div>                
             </div>
         </div><!-- container -->
     </footer>

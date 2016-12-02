@@ -1,312 +1,261 @@
-body {
-	> header {
-		padding: 15px 0;
+header {
+	padding: 15px 0;
 
-		> .content {			
-			margin-left: 0;
-			margin-right: 0;			
-			margin-top: 5px;
+	> .content {
+		margin-left: 0;
+		margin-right: 0;			
+		margin-top: 5px;
+		
+		height: 80px;
+
+		.logoFatec {
+			@include make-xs-column(12);
+			@include make-sm-column(4);
+			@include make-md-column(4);
 			
-			height: 80px;
+			padding: 0;
+		}
 
-			.logoFatec {
-				@include make-xs-column(12);
-				@include make-sm-column(4);
-				@include make-md-column(4);
-				padding: 0;
-			}
+		.logoCPS {
+			@include make-xs-column(0);
+			@include make-sm-column(3);
+			@include make-md-column(4);
+			
+			img {					
+				padding-left: 20px;				
+			}				
+		}
 
-			.logoCPS {
-				@include make-xs-column(0);
-				@include make-sm-column(3);
-				@include make-md-column(4);
-				
-				a {
-					> img {					
-						padding-left: 20px; 
-					}	
-				}				
-			}
+		.logoGoverno {
+			@include make-xs-column(0);
+			@include make-sm-column(5);
+			@include make-md-column(4);
+			
+			padding-right: 0;
 
-			.logoGoverno {
-				@include make-xs-column(0);
-				@include make-sm-column(5);
-				@include make-md-column(4);
-				padding-right: 0;
-
-				> a {
-					> img {					
-						padding: 5px 0 0 25px;
-					}	
-				}
+			> img {					
+				padding: 5px 0 0 25px;				
 			}
 		}
-	}//header
+	}
+}//header
 
-	#navegacao {
-		background-color: $menu_claro;
-		width: 100%;
+#navegacao {
+	background-color: $cor-clara;
+	width: 100%;
+	
+	.content {
+		margin-left: 0;
+		margin-right: 0;
 
-		> .container {
-			.content {
-				margin-left: 0;
-				margin-right: 0;
+		.navegacao-content {
+			@include make-md-column(12);
+			
+			padding: 0;
 
-				#navegacao__content {
-					@include make-md-column(12);
-					padding: 0;
+			.navbar {
+				border-radius: 0;
+				border: none;
+				background-color: $cor-clara;
+				margin-bottom: 0;
+				
+				.navbar-toggle {
+					border-color:#FFFFFF;
 
-					.navbar {
-						border-radius: 0;
-						border: none;
-						background-color: $menu_claro;
-						margin-bottom: 0;
-						
-						.navbar-toggle {
-							border-color:#FFFFFF;
-
-							&:hover, &:focus {
-								background-color: $menu_escuro;
-							}
-
-							.icon-bar {
-								background-color:#FFFFFF;
-							}
-						}
-
-						.navbar-collapse {
-							border: none;
-							padding-top: 2px;
-							padding-left: 0;
-							
-							> ul.navbar-nav {
-
-								> li {								
-									background-color: $menu_claro;
-								    box-shadow: 0 0 0 2px $menu_claro;
-								    list-style: none;
-
-									&.active{																	
-										> a {										
-											background-color: $menu_escuro;		
-											box-shadow: 0 0 0 2px $menu_escuro;
-									    	border-bottom: 3px solid #FFFFFF;
-									    	height: 46px;	
-									    	z-index: 999;						
-										}									
-									}
-
-									a {
-										outline: none;
-										color: #FFFFFF;	
-										font: 400 16px $fonte_principal;
-										height: 46px;	
-										background-color: $menu_claro;
-										transition: all 0.3s linear; 
-
-										&:hover {
-											background-color: $menu_escuro;
-										    box-shadow: 0 0 0 2px $menu_escuro;
-										    border-bottom: 3px solid #FFFFFF;
-										    z-index: 999;
-										    transition: all 0.2s linear;
-										}
-
-										.glyphicon {	
-											font-size: 14px;
-										}
-									}
-
-									> ul.dropdown-menu {
-										box-shadow: none;	
-										border-radius: 0;
-										border: none;
-										background-color: $menu_claro;
-										padding: 0 2px;
-
-										> li {
-											background-color: $menu_claro;											
-											margin-top: 3px;
-											list-style: none;
-
-											> a {
-												border: none;
-												padding-top: 15px;
-												font: 14px $fonte_principal;
-											}
-										}
-									}
-								}//li
-							}//ul.navbar-nav
-						}//navbar-collapse
-					}//navbar
-				}//navegacao__content		
-			}//content				
-		}//container		
-	}//navgeção
-
-	> .modal {
-		> .modal-dialog {
-			> .modal-content {
-				> .modal-header {
-					font: 600 16px $fonte_principal;
-					text-align: center;
-				}
-
-				> .modal-body {
-					> .form-horizontal {
-						> .form-group {
-							.control-label {
-								@include make-xs-column(3);
-								@include make-sm-column(3);
-								@include make-md-column(3);
-
-								font: 600 14px $fonte_principal;
-							}
-							.inputs {
-								@include make-xs-column(9);
-								@include make-sm-column(9);
-								@include make-md-column(9);
-
-								font: 400 14px $fonte_principal;
-							}
-							.check {
-								@include make-xs-column(12);
-								@include make-sm-column(12);
-								@include make-md-column(12);
-
-								font: 600 14px $fonte_principal;
-							}
-
-							.botao {
-								@include make-xs-column(12);
-								@include make-sm-column(12);
-								@include make-md-column(12);
-
-								.btn {																		
-									background-color: $menu_claro;
-									border: none;
-									font: 600 16px $fonte_principal;
-									color: #fff;
-
-									&:hover {
-										background-color: $menu_escuro;
-									}
-								}								
-							}
-						}
+					&:hover, &:focus {
+						background-color: $cor-escura;
 					}
-				}//modal-body
-			}//modal-content
-		}//modal-dialog
-	}//modal
 
-	> footer {
-		background-color: $menu_escuro;		
-		
-		> .container {
-			> .content {
-				margin-top: 25px;
-				margin-bottom: 25px;					
-
-				> .redes_sociais {
-					@include make-xs-column(4);
-					@include make-sm-column(3);
-					@include make-md-column(2);
-
-					padding: 0;
-
-					> a {
-						img {
-							float: left;
-							display: inline;
-						}						
-					}					
+					.icon-bar {
+						background-color:#FFFFFF;
+					}
 				}
 
-				> .endereco {
-					@include make-xs-column(8);
-					@include make-sm-column(9);
-					@include make-md-column(4);
-					@include make-md-column-offset(6);
-
-					font: 300 14px $fonte_principal;
-					color: #FFFFFF;
-					text-align: center;
-				}
-			}//content
-
-			#mapa {
-				//margin-bottom: 25px;
-
-				#mapa_cursos {
-					@include make-xs-column(12);
-					@include make-sm-column(3);
-					@include make-md-column(3);
-				}
-
-				.mapa_dar_nome {
-					@include make-xs-column(12);
-					@include make-sm-column(2);
-					@include make-md-column(2);
-				}
-
-				#maps {
-					@include make-xs-column(12);
-					@include make-sm-column(5);
-					@include make-md-column(4);
-					@include make-md-column-offset(1);
-				}
-
-				h4 {
-					margin: 0;
-
-					a {
-						font: bold 18px $fonte_principal;
-						color: #FFFFFF;
-						text-decoration: none;
-					}				
-				}
-
-				ul {
-					padding-left: 0px;
-
+				.navbar-collapse {
+					border: none;
+					padding-top: 2px;
+					padding-left: 0;				
+					
 					li {
-						list-style: none;
+						background-color: $cor-clara;
+					    box-shadow: 0 0 0 2px $cor-clara;
+					    list-style: none;
+
+						&.active{																	
+							a {										
+								background-color: $cor-escura;		
+								box-shadow: 0 0 0 2px $cor-escura;
+						    	border-bottom: 3px solid #FFFFFF;
+						    	height: 46px;	
+						    	z-index: 999;						
+							}									
+						}
+
 						a {
-							font: 300 14px $fonte_principal;
-							color: #FFFFFF;
-							text-decoration: none;
+							color: #FFFFFF;	
+							font: 400 16px $fonte-principal;
+							height: 46px;	
+							background-color: $cor-clara;
+							transition: all 0.3s linear; 
 
 							&:hover {
-								font-weight: bold;
-							}														
-						}						
-					}
-				}
-			}//mapa
+								background-color: $cor-escura;
+							    box-shadow: 0 0 0 2px $cor-escura;
+							    border-bottom: 3px solid #FFFFFF;
+							    z-index: 999;
+							    transition: all 0.2s linear;
+							}
 
+							.glyphicon {	
+								font-size: 14px;
+							}
+						}
 
+						> ul.dropdown-menu {
+							box-shadow: none;	
+							border-radius: 0;
+							border: none;
+							background-color: $cor-clara;
+							padding: 0 2px;
 
-			#desenvolvido {
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(12);
+							li {
+								background-color: $cor-clara;											
+								margin-top: 3px;
 
-				font: 300 12px $fonte_principal;
-				color: #FFFFFF;
-				text-align: center;
-				margin: 10px;
+								a {
+									border: none;
+									padding-top: 15px;
+									font-size: 14px;
+								}
+							}
+						}
+					}//li
+					
+				}//navbar-collapse
+			}//navbar
+		}//navegacao-content		
+	}//content				
+			
+}//navgeção
 
-				a {
-					text-decoration: none;
-					color: #FFFFFF;
+.modal {
+	font: 600 16px $fonte-principal;
 
-					&:hover {
-						font-weight: bold;
-					}
-				}
-			}
-		}//container
-	}//footer
+	.modal-header {		
+		text-align: center;
+		font-size: 18px;
+	}
+			
+	.control-label {
+		@include make-xs-column(3);
+		@include make-sm-column(3);
+		@include make-md-column(3);
+
+	}
+	.inputs {
+		@include make-xs-column(9);
+		@include make-sm-column(9);
+		@include make-md-column(9);
+
+		font-weight: normal;
+	}
+	.check {
+		@include make-xs-column(12);
+		@include make-sm-column(12);
+		@include make-md-column(12);
+	}
+
+	.botao {
+		@include make-xs-column(12);
+		@include make-sm-column(12);
+		@include make-md-column(12);		
+	}
 }
+
+footer {
+	background-color: $cor-escura;	
+		
+	.content {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		font-size: 14px;
+		font-weight: 300;		
+		color: #FFFFFF;					
+	
+		a {					
+			color: #FFFFFF;
+
+			&:hover {
+				font-weight: bold;
+			}														
+		}
+
+		.redes_sociais {
+			@include make-xs-column(4);
+			@include make-sm-column(3);
+			@include make-md-column(2);
+
+			padding: 0;
+
+			img {
+				float: left;
+				display: inline;		
+			}					
+		}
+
+		.endereco {
+			@include make-xs-column(8);
+			@include make-sm-column(9);
+			@include make-md-column(4);
+			@include make-md-column-offset(6);
+			
+			p {
+				text-align: center;
+			}			
+		}
+
+		.mapa_cursos {
+			@include make-xs-column(12);
+			@include make-sm-column(3);
+			@include make-md-column(3);
+		}
+
+		.mapa_dar_nome {
+			@include make-xs-column(12);
+			@include make-sm-column(2);
+			@include make-md-column(2);
+		}
+
+		.maps {
+			@include make-xs-column(12);
+			@include make-sm-column(5);
+			@include make-md-column(4);
+			@include make-md-column-offset(1);
+		}
+
+		h4 {
+			margin: 0;
+
+			a {
+				font-size: 18px;
+			}				
+		}
+
+		ul {
+			padding-left: 0px;
+
+			li {
+				list-style: none;										
+			}
+		}
+		
+		.desenvolvido {
+			@include make-xs-column(12);
+			@include make-sm-column(12);
+			@include make-md-column(12);
+			
+			margin: 10px;
+			text-align: center;
+		}		
+	}
+}//footer

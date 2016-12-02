@@ -1,8 +1,32 @@
-a {
-	outline: none !important;
-	
-	img {
+.container {
+	font-family: $fonte-principal;
+	font-size: 16px;
+	color: $cor-texto;
+
+	a {
+		outline: none;
+		text-decoration: none;
+		
+		img {
+			border: none;
+		}
+	}
+
+	ul {
+		li {
+			list-style: square;
+		}
+	}
+
+	.btn-default {
+		background-color: $cor-clara;
 		border: none;
+		font-weight: bold;
+		color: #fff;
+
+		&:hover {
+			background-color: $cor-escura;
+		}
 	}
 }
 
@@ -18,8 +42,3 @@ a {
 	z-index: 998;	
 }
 
-ul {
-	li {
-		list-style: square;
-	}
-}

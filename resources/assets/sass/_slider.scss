@@ -3,9 +3,9 @@ body {//css para create, edit, index, show
 		> .container {
 			margin-top: 25px;
 			margin-bottom: 50px;
-			font-family: $fonte_principal;
+			font-family: $fonte-principal;
 			font-size: 16px;
-			color: $texto;
+			color: $cor-texto;
 
 			> .content {
 				> .formulario {//create
@@ -15,13 +15,13 @@ body {//css para create, edit, index, show
 					}
 					.form-group {
 						.btn-default {
-							background-color: $menu_claro;
+							background-color: $cor-clara;
 							border: none;
-							font: 600 14px $fonte_principal;
+							font: 600 14px $fonte-principal;
 							color: #fff;
 
 							&:hover {
-								background-color: $menu_escuro;
+								background-color: $cor-escura;
 							}
 						}
 					}							
@@ -42,7 +42,7 @@ body {//css para create, edit, index, show
 							td {
 								a {
 									text-decoration: none;
-									color: $texto;
+									color: $cor-texto;
 								}
 								img {
 									max-width: 500px;
@@ -69,13 +69,13 @@ body {//css para create, edit, index, show
 							text-align: right;
 							
 							.btn-default {
-								background-color: $menu_claro;
+								background-color: $cor-clara;
 								border: none;
-								font: 600 14px $fonte_principal;
+								font: 600 14px $fonte-principal;
 								color: #fff;
 
 								&:hover {
-									background-color: $menu_escuro;
+									background-color: $cor-escura;
 								}
 							}								
 						}						
@@ -83,13 +83,13 @@ body {//css para create, edit, index, show
 
 					.botoes {//show
 						margin-right: 25px;
-						background-color: $menu_claro;
+						background-color: $cor-clara;
 						border: none;
-						font: 600 14px $fonte_principal;
+						font: 600 14px $fonte-principal;
 						color: #fff;
 
 						&:hover {
-							background-color: $menu_escuro;
+							background-color: $cor-escura;
 						}
 					
 						&:nth-child(3) {
@@ -107,13 +107,13 @@ body {//css para create, edit, index, show
 								text-align: center;
 
 								.btn {															
-									background-color: $menu_claro;
+									background-color: $cor-clara;
 									border: none;
-									font: 600 16px $fonte_principal;
+									font: 600 16px $fonte-principal;
 									color: #fff;									
 
 									&:hover {
-										background-color: $menu_escuro;
+										background-color: $cor-escura;
 									}
 
 									&:nth-child(even) {

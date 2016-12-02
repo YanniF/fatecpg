@@ -1,74 +1,53 @@
-body {
-	> .login,
-	> .register {
-		> .content {
-			> .formulario {
-				margin: 25px 0 50px;
-				font-family: $fonte_principal;
-				font-size: 16px;
+.login,
+.register {	
+	.formulario {
+		margin: 25px 0 50px;
+		
+		> h2 {
+			@include make-xs-column(12);
+			@include make-sm-column(12);
+			@include make-md-column(12);
 				
-				> h2 {
-					@include make-xs-column(12);
-					@include make-sm-column(12);
-					@include make-md-column(12);
-						
-					padding-left: 0;
-					color: $titulo;					
-				}
+			padding-left: 0;
+			color: $cor-titulo;					
+		}
+		
+		.control-label {							
+			@include make-xs-column(3);
+			@include make-sm-column(2);
+			@include make-md-column(1);			
+		}
 
-				> .form-horizontal {
-					> .form-group {
-						> .control-label {							
-							@include make-xs-column(3);
-							@include make-sm-column(2);
-							@include make-md-column(1);	
+		.inputs {
+			@include make-xs-column(9);
+			@include make-sm-column(10);
+			@include make-md-column(5);							
+			@include make-md-column-offset(6);
+			@include make-md-column-pull(6);							
+		}
 
-							color: $texto;			
-						}
+		.check {
+			@include make-xs-column(12);
+			@include make-sm-column(10);							
+			@include make-sm-column-offset(2);
+			@include make-md-column(11);
+			@include make-md-column-offset(1);							
+		}
 
-						> .inputs {
-							@include make-xs-column(9);
-							@include make-sm-column(10);
-							@include make-md-column(5);							
-							@include make-md-column-offset(6);
-							@include make-md-column-pull(6);							
-						}
-
-						> .check {
-
-							@include make-xs-column(12);
-							@include make-sm-column(10);							
-							@include make-sm-column-offset(2);
-							@include make-md-column(11);
-							@include make-md-column-offset(1);							
-						}
-
-						.botao {
-							
-							@include make-xs-column(12);
-							@include make-sm-column(10);							
-							@include make-sm-column-offset(2);
-							@include make-md-column(11);
-							@include make-md-column-offset(1);
-
-							.btn-primary {
-								background-color: $menu_claro;
-								border: none;
-								font: 600 16px $fonte_principal;
-								color: #fff;
-
-								&:hover {
-									background-color: $menu_escuro;
-								}
-							}
-
-							.btn-link {
-								font-size: 16px;
-							}
-						}
-					}
+		.botao {			
+			@include make-xs-column(12);
+			@include make-sm-column(10);							
+			@include make-sm-column-offset(2);
+			@include make-md-column(11);
+			@include make-md-column-offset(1);
+			
+			.btn {
+				margin-right: 25px;
+										
+				&:nth-child(3) {//o último botão não terá margin
+				    margin-right: 0;
 				}
 			}
-		}//content
-	}//login
+		}
+	}	
 }
