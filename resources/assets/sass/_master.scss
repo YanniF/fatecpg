@@ -213,7 +213,7 @@ footer {
 		}
 
 		ul {
-			padding-left: 0px;
+			padding-left: 0;
 
 			li {
 				list-style: none;
@@ -230,3 +230,125 @@ footer {
 		}
 	}
 }//footer
+
+@media screen and (max-width: $resolucao-md) {
+
+	header {
+		.logoFatec {
+			@include make-sm-column(12);
+
+			img {
+				margin: 0 auto;
+			}
+		}
+
+		.logoCPS {
+			display: none;
+		}
+
+		.logoGoverno {
+			display: none;
+		}
+	}
+
+	.modal {
+		.control-label {
+			@include make-sm-column(3);
+		}
+		.inputs {
+			@include make-sm-column(9);
+		}
+		.check,
+		.botao {
+			@include make-sm-column(12);
+		}
+	}	
+
+	footer {
+		.container {
+			.redes-sociais {
+				@include make-sm-column(3);
+			}
+			.endereco {
+				@include make-sm-column(9);
+			}
+			.mapa-cursos {
+				@include make-sm-column(3);
+			}
+			.mapa_dar_nome,
+			.departamentos {
+				@include make-sm-column(2);
+			}
+			.maps {
+				@include make-sm-column(5);
+			}
+
+			h4 {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}//footer
+}
+
+@media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
+	
+	.navegacao {
+		.container {
+			.navegacao-content {
+				.navbar-collapse {
+					ul.navbar-nav {
+						padding-left: 15px;
+
+						li {
+							&.active {
+								a {
+									border: none;
+								}
+							}
+
+							a {
+								font-size: 14px;
+
+								&:hover {
+									border: none;
+								}
+							}
+
+							ul.dropdown-menu {
+								li {
+									a {
+										font-size: 12px;
+										padding-left: 20px;
+									}
+								}
+							}
+						}
+					}//ul.navbar-nav
+				}//navbar-collapse
+			}//navegacao-content
+		}//container
+	}//navegacao
+	
+	footer {
+		.container {
+			.redes-sociais {
+				@include make-xs-column(4);
+			}
+			.endereco {
+				@include make-xs-column(8);
+			}
+			.mapa-cursos {
+				@include make-xs-column(12);
+			}
+			.mapa_dar_nome,
+			.departamentos {
+				@include make-xs-column(12);
+			}
+			.maps {
+				@include make-xs-column(12);
+			}
+		}
+	}//footer	
+}

@@ -1,8 +1,15 @@
-.container {
+body {
 	font-family: $fonte-principal;
 	font-size: 16px;
 	color: $cor-texto;
 
+	@media screen and (max-width: $resolucao-md) {
+
+		font-size: 14px;
+	}
+}
+
+.container {
 	a {
 		outline: none;
 		text-decoration: none;
@@ -17,33 +24,34 @@
 			list-style: square;
 		}
 	}
+}
 
-	.btn-primary {
-		background-color: $cor-clara;
-		border: none;
-		font-weight: bold;
-		color: $cor-texto-clara;
+//estilo para todos os botões
+.btn-primary {
+	background-color: $cor-clara;
+	border: none;
+	font-weight: bold;
+	color: $cor-texto-clara;
 
-		&:hover {
-			background-color: $cor-escura;
-		}
+	&:hover {
+		background-color: $cor-escura;
+	}
+}
+
+#apagarModal {
+	font-weight: normal;
+
+	p {
+		margin-bottom: 25px;
 	}
 
-	#apagarModal {
-		font-weight: normal;
+	form {
+		text-align: center;
 
-		p {
-			margin-bottom: 25px;
+		.btn:nth-child(even) {
+			margin-left: 25px;
 		}
-
-		form {
-			text-align: center;
-
-			.btn:nth-child(even) {//só o segundo botão terá margin
-				margin-left: 25px;
-			}
-		}
-	}//apagarModal
+	}
 }
 
 .content {

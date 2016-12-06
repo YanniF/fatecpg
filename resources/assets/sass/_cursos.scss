@@ -1,21 +1,19 @@
-.ads, 
+.ads,
 .comex,
 .ge,
 .pq {
 	margin-bottom: 50px;
 
 	.curso-info {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
 		@include make-md-column(12);
-		
+
 		margin-top: 25px;
 		padding: 0;
 		text-align: justify;
-		
+
 		.table {
 			margin-bottom: 0;
-							
+
 			.titulo {
 				font-size: 18px;
 			}
@@ -29,7 +27,41 @@
 				span {
 					font-size: 12px;
 				}
-			}															
+			}
 		}
-	}//curso-info
+
+		ul {
+			padding-left: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: $resolucao-md) {
+
+	.ads,
+	.comex,
+	.ge,
+	.pq {
+		.curso-info {
+			@include make-sm-column(12);
+
+			margin-top: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
+
+	.ads,
+	.comex,
+	.ge,
+	.pq {
+		.curso-info {
+			@include make-xs-column(12);
+
+			//para o email não quebrar o layout
+			overflow-wrap: break-word;//These are technically the same, but use both
+			word-wrap: break-word;
+		}
+	}
 }

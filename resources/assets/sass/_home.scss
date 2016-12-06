@@ -120,3 +120,56 @@
 		}//noticia
 	}//noticias-item
 }//noticias
+
+@media screen and (max-width: $resolucao-md) {
+
+	.cursos-home {
+		margin-top: 10px;
+
+		h2 {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		.cursos-itens {
+			margin-bottom: 20px;
+
+			.cursos-item {
+				@include make-sm-column(6);
+				
+				margin-bottom: 15px;
+
+				img {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.noticias-home {
+		.data {
+			@include make-sm-column(2);
+		}
+		.noticia {
+			@include make-sm-column(10);
+		}
+	}
+}
+
+@media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
+	
+	.cursos-home {
+		.cursos-item {
+			@include make-xs-column(12);
+		}
+	}
+
+	.noticias {
+		.data {
+			@include make-xs-column(12);
+		}
+		.noticia {
+			@include make-xs-column(12);
+		}
+	}
+}
