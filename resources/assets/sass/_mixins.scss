@@ -1,0 +1,6 @@
+//não exibir o elemento caso o tamanho da tela seja muito pequena
+@mixin nao-exibir-elemento {
+	@media screen and (max-width: 350px) {
+		display: none;
+	}
+}

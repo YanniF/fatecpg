@@ -1,13 +1,3 @@
-@media screen and (max-width: $resolucao-md) {///sm
-
-	.noticias,
-	.slider {
-		> .container {
-			margin-top: 10px;
-		}
-	}
-}
-
 @media screen and (max-width: 500px) {
 
 	footer {
@@ -24,18 +14,4 @@
 			}//content
 		}//container
 	}//footer
-
-	.noticias,
-	.slider {
-		.container {
-			.content {
-				.noticias-info,
-				.slider-info {
-					.botoes {//show
-						margin-right: 15px;
-					}
-				}
-			}
-		}
-	}//noticias
 }

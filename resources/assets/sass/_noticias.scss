@@ -1,75 +1,67 @@
 //css para create, edit, index, show
 .noticias {
 	.container {
-		margin-top: 25px;
+		margin-top: 1.8em;
 		margin-bottom: 50px;
 
 		.noticias-info {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
 			@include make-md-column(12);
 
 			padding: 0;
 
 			.data {
 				margin-top: 0;
-				font-size: 14px;						
+				font-size: 14px;
 			}
 
 			.botoes {//show
-				margin-right: 25px;
-				
-				&:nth-child(4) {
+				margin-right: 1.8em;
+
+				&:last-child {
 				    margin-right: 0;
-				}	
+
+				    @include nao-exibir-elemento;
+				}
 			}
 
 			.table {//index
-				margin-top: 25px;
+				margin-top: 1.8em;
 
 				tr {
-					cursor: pointer;	
+					cursor: pointer;
 					color: $cor-texto;
 				}
 			}
 
 			p {
-				margin-bottom: 25px;
+				margin-bottom: 1.8em;
 				text-align: justify;
 			}
 
 			.titulo-btn {//index
 				h2 {
-					@include make-xs-column(6);
-					@include make-sm-column(6);
 					@include make-md-column(6);
 
 					padding-left: 0;
 				}
-				.btn-add {							
-					@include make-xs-column(6);
-					@include make-sm-column(6);
+				.btn-add {
 					@include make-md-column(6);
 
 					margin-top: 20px;
 					padding-right: 0;
-					text-align: right;			
-				}						
+					text-align: right;
+				}
 			}
 		}
-			
+
 		//create e edit
 		> .h2 {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
 			@include make-md-column(12);
 		}
 
 		.formulario {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
 			@include make-md-column(8);
-			
+
 			ul {
 				padding-left: 30px;
 				margin-top: 0;
@@ -77,9 +69,7 @@
 		}
 
 		.formulario2 {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
-			@include make-md-column(4);			
+			@include make-md-column(4);
 
 			.botoes {
 				text-align: center;
@@ -87,9 +77,9 @@
 				.btn {
 					margin-left: 1.2em;
 					margin-right: 1.2em;
-				}		
+				}
 			}
-		}				
+		}
 	}//container
 }//noticias
 
@@ -97,32 +87,34 @@
 
 	.noticias {
 		.container {
+			margin-top: 10px;
+
 			.noticias-info {
 				@include make-sm-column(12);
 
 				.titulo-btn {//index
-					h2 {						
+					h2 {
 						@include make-sm-column(6);
-					}					
-					.btn-add {						
+					}
+					.btn-add {
 						@include make-sm-column(6);
-					}						
+					}
 				}
 			}
-				
+
 			//create e edit
-			> .h2 {				
+			> .h2 {
 				@include make-sm-column(12);
 			}
 
-			.formulario {				
+			.formulario {
 				@include make-sm-column(12);
 			}
 
-			.formulario2 {				
-				@include make-sm-column(12);				
-			}				
-		}	
+			.formulario2 {
+				@include make-sm-column(12);
+			}
+		}
 	}
 }
 
@@ -137,12 +129,20 @@
 					h2 {
 						@include make-xs-column(6);
 					}
-					.btn-add {							
+					.btn-add {
 						@include make-xs-column(6);
-					}						
+					}
+				}
+
+				.botoes {//show
+					margin-right: 0.8em;
+
+					&:last-child {
+					    margin-right: 0;
+					}
 				}
 			}
-				
+
 			//create e edit
 			> .h2 {
 				@include make-xs-column(12);
@@ -154,7 +154,7 @@
 
 			.formulario2 {
 				@include make-xs-column(12);
-			}			
+			}
 		}//container
 	}//noticias
 }

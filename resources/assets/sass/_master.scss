@@ -221,8 +221,6 @@ footer {
 		}
 
 		.desenvolvido {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
 			@include make-md-column(12);
 
 			margin: 10px;
@@ -262,7 +260,7 @@ footer {
 		.botao {
 			@include make-sm-column(12);
 		}
-	}	
+	}
 
 	footer {
 		.container {
@@ -293,7 +291,7 @@ footer {
 }
 
 @media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
-	
+
 	.navegacao {
 		.container {
 			.navegacao-content {
@@ -330,7 +328,7 @@ footer {
 			}//navegacao-content
 		}//container
 	}//navegacao
-	
+
 	footer {
 		.container {
 			.redes-sociais {
@@ -350,5 +348,5 @@ footer {
 				@include make-xs-column(12);
 			}
 		}
-	}//footer	
+	}//footer
 }

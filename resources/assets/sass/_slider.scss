@@ -1,29 +1,20 @@
 //css para create, edit, index, show
 .slider {
 	.container {
-		margin-top: 25px;
+		margin-top: 1.8em;
 		margin-bottom: 50px;
-		
-		.formulario {//create
-			ul {
-				padding-left: 30px;
-				margin-top: 0;
-			}											
-		}
 
-		.slider-info {
-			@include make-xs-column(12);
-			@include make-sm-column(12);
+		.slider-info {			
 			@include make-md-column(12);
 
-			padding: 0;					
-			
+			padding: 0;
+
 			.table {//index
-				margin-top: 25px;
+				margin-top: 1.8em;
 
 				tr {
-					cursor: pointer;							
-					a {						
+					cursor: pointer;
+					a {
 						color: $cor-texto;
 					}
 					img {
@@ -31,33 +22,87 @@
 					}
 				}
 			}
-			
+
 			.titulo-btn {//index
 				h2 {
-					@include make-xs-column(6);
-					@include make-sm-column(6);
 					@include make-md-column(6);
 
 					padding-left: 0;
 				}
-				.btn-add {							
-					@include make-xs-column(6);
-					@include make-sm-column(6);
+				.btn-add {
 					@include make-md-column(6);
 
 					margin-top: 20px;
 					padding-right: 0;
-					text-align: right;				
-				}						
+					text-align: right;
+				}
 			}
 
 			.botoes {//show
-				margin-right: 25px;
-							
-				&:nth-child(3) {
+				margin-right: 1.8em;
+
+				&:last-child {
 				    margin-right: 0;
 				}
 			}
-		}//slider-info				
-	}//container	
+		}//slider-info
+
+		.formulario {//create
+			ul {
+				padding-left: 30px;
+				margin-top: 0;
+			}
+		}
+	}//container
 }//slider
+
+
+@media screen and (max-width: $resolucao-md) {
+
+	.slider {
+		.container {
+			margin-top: 10px;
+
+			.slider-info {
+				@include make-sm-column(12);
+
+				.table {//index
+					tr {						
+						img {
+							max-width: 300px;
+						}
+					}
+				}
+
+				.titulo-btn {//index
+					h2 {
+						@include make-sm-column(6);
+					}
+					.btn-add {
+						@include make-sm-column(6);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
+
+	.slider {
+		.container {
+			.slider-info {
+				@include make-xs-column(12);
+
+				.titulo-btn {//index
+					h2 {
+						@include make-xs-column(6);
+					}
+					.btn-add {
+						@include make-xs-column(6);
+					}
+				}
+			}
+		}//container
+	}//slider
+}
