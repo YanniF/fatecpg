@@ -38,6 +38,20 @@ body {
 	}
 }
 
+.botoes {//show
+	margin-top: 1.6em;
+
+	.btn {
+		margin-right: 1.8em;
+
+		&:last-child {
+		    margin-right: 0;
+
+		    @include nao-exibir-elemento;
+		}
+	}
+}
+
 #apagarModal {
 	font-weight: normal;
 
@@ -65,4 +79,3 @@ body {
 	top: 0;
 	z-index: 998;
 }
-

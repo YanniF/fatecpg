@@ -4,19 +4,19 @@
 
 <div class="slider">
 	<div class="container">
-		<div class="content">
-	    	<h2>Notícias</h2>
+		<div class="content">	    	
 	    	<div class="formulario">
+	    		<h2>Slider</h2>
 	    		{!! Html::ul($errors->all(), ['class'=>'alert alert-danger']) !!}
 			  	{!! Form::model($imagem,['url' => 'slider/' . $imagem->id, 'method' => 'put', 'files' => true]) !!}
-			  		<p>
+			  		<div class="form-group">
 			  			<img src="{{ $imagem->imagem }}" class="img-responsive">
 			  			<h5>Selecione outra imagem ou deixe em branco para não alterar.</h5>
-			  		</p>
+			  		</div>
 			    	@include('partials.forms.slider')
 			    	<div class="form-group">			    		
 			    		{!! Form::submit('Salvar',['class'=>'btn btn-primary']) !!}
-					<a class="btn btn-primary" href="{{ action('SliderController@index') }}">Cancelar</a>
+						<a class="btn btn-primary" href="{{ action('SliderController@index') }}">Cancelar</a>
 			    	</div>					
 			  	{!! Form::close() !!}
 	    	</div>

@@ -14,12 +14,14 @@
 			</div>
 		</div>
 		<div class="content">
-			<div class="slider-info">				
-				@if(!Auth::guest())
-					<a href="/slider/{{ $imagem->id }}/edit" class="btn btn-primary botoes">Editar</a>
-					<a href="#" data-toggle="modal" data-target="#apagarModal" class="btn btn-primary botoes">Apagar</a>
-				@endif
-				<a href="{{ action('SliderController@index') }}" class="btn btn-primary botoes">Voltar</a>
+			<div class="slider-info">
+				<div class="botoes">
+					@if(!Auth::guest())
+						<a href="/slider/{{ $imagem->id }}/edit" class="btn btn-primary">Editar</a>
+						<a href="#" data-toggle="modal" data-target="#apagarModal" class="btn btn-primary">Apagar</a>
+					@endif
+					<a href="{{ action('SliderController@index') }}" class="btn btn-primary">Voltar</a>
+				</div>				
 			</div>			
 		</div>		
 	</div>{{-- container --}}

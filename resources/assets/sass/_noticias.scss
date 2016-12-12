@@ -3,84 +3,76 @@
 	.container {
 		margin-top: 1.8em;
 		margin-bottom: 50px;
+	}
+	.noticias-info {
+		@include make-md-column(12);
 
-		.noticias-info {
-			@include make-md-column(12);
+		padding: 0;
 
-			padding: 0;
+		.data {
+			margin-top: 0;
+			font-size: 14px;
+		}
 
-			.data {
-				margin-top: 0;
-				font-size: 14px;
-			}
+		.table {//index
+			margin-top: 1.8em;
 
-			.botoes {//show
-				margin-right: 1.8em;
-
-				&:last-child {
-				    margin-right: 0;
-
-				    @include nao-exibir-elemento;
-				}
-			}
-
-			.table {//index
-				margin-top: 1.8em;
-
-				tr {
-					cursor: pointer;
-					color: $cor-texto;
-				}
-			}
-
-			p {
-				margin-bottom: 1.8em;
-				text-align: justify;
-			}
-
-			.titulo-btn {//index
-				h2 {
-					@include make-md-column(6);
-
-					padding-left: 0;
-				}
-				.btn-add {
-					@include make-md-column(6);
-
-					margin-top: 20px;
-					padding-right: 0;
-					text-align: right;
-				}
+			tr {
+				cursor: pointer;
+				color: $cor-texto;
 			}
 		}
 
-		//create e edit
-		> .h2 {
-			@include make-md-column(12);
+		p {
+			margin-bottom: 1.8em;
+			text-align: justify;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
 		}
 
-		.formulario {
-			@include make-md-column(8);
+		.titulo-btn {//index
+			h2 {
+				@include make-md-column(6);
 
-			ul {
-				padding-left: 30px;
-				margin-top: 0;
+				padding-left: 0;
+			}
+			.btn-add {
+				@include make-md-column(6);
+
+				margin-top: 20px;
+				padding-right: 0;
+				text-align: right;
 			}
 		}
+	}
 
-		.formulario2 {
-			@include make-md-column(4);
+	//create e edit
+	> .h2 {
+		@include make-md-column(12);
+	}
 
-			.botoes {
-				text-align: center;
+	.formulario {
+		@include make-md-column(8);
 
-				.btn {
-					margin-left: 1.2em;
-					margin-right: 1.2em;
-				}
+		ul {
+			padding-left: 30px;
+			margin-top: 0;
+		}
+	}
+
+	.formulario2 {
+		@include make-md-column(4);
+
+		.form-group:last-child {
+			margin-top: 1.6em;
+			text-align: center;
+
+			.btn {
+				margin-left: 1.2em;
+				margin-right: 1.2em;
 			}
 		}
-	}//container
+	}
 }//noticias
 
 @media screen and (max-width: $resolucao-md) {
@@ -88,32 +80,31 @@
 	.noticias {
 		.container {
 			margin-top: 10px;
+		}
+		.noticias-info {
+			@include make-sm-column(12);
 
-			.noticias-info {
-				@include make-sm-column(12);
-
-				.titulo-btn {//index
-					h2 {
-						@include make-sm-column(6);
-					}
-					.btn-add {
-						@include make-sm-column(6);
-					}
+			.titulo-btn {//index
+				h2 {
+					@include make-sm-column(6);
+				}
+				.btn-add {
+					@include make-sm-column(6);
 				}
 			}
+		}
 
-			//create e edit
-			> .h2 {
-				@include make-sm-column(12);
-			}
+		//create e edit
+		> .h2 {
+			@include make-sm-column(12);
+		}
 
-			.formulario {
-				@include make-sm-column(12);
-			}
+		.formulario {
+			@include make-sm-column(12);
+		}
 
-			.formulario2 {
-				@include make-sm-column(12);
-			}
+		.formulario2 {
+			@include make-sm-column(12);
 		}
 	}
 }
@@ -121,40 +112,30 @@
 @media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
 
 	.noticias {
-		.container {
-			.noticias-info {
-				@include make-xs-column(12);
+		.noticias-info {
+			@include make-xs-column(12);
 
-				.titulo-btn {//index
-					h2 {
-						@include make-xs-column(6);
-					}
-					.btn-add {
-						@include make-xs-column(6);
-					}
+			.titulo-btn {//index
+				h2 {
+					@include make-xs-column(6);
 				}
-
-				.botoes {//show
-					margin-right: 0.8em;
-
-					&:last-child {
-					    margin-right: 0;
-					}
+				.btn-add {
+					@include make-xs-column(6);
 				}
 			}
+		}
 
-			//create e edit
-			> .h2 {
-				@include make-xs-column(12);
-			}
+		//create e edit
+		.h2 {
+			@include make-xs-column(12);
+		}
 
-			.formulario {
-				@include make-xs-column(12);
-			}
+		.formulario {
+			@include make-xs-column(12);
+		}
 
-			.formulario2 {
-				@include make-xs-column(12);
-			}
-		}//container
+		.formulario2 {
+			@include make-xs-column(12);
+		}
 	}//noticias
 }

@@ -4,3 +4,15 @@
 		display: none;
 	}
 }
+
+@mixin menu-escuro {
+	background-color: $cor-escura;
+    box-shadow: 0 0 0 2px $cor-escura;
+    transition: all 0.2s linear;
+}
+
+@mixin menu-claro {
+	background-color: $cor-clara;
+	box-shadow: 0 0 0 2px $cor-clara;
+	transition: all 0.2s linear;
+}

@@ -75,56 +75,65 @@ header {
 					    box-shadow: 0 0 0 2px $cor-clara;
 					    list-style: none;
 
-						&.active{
-							a {
-								background-color: $cor-escura;
-								box-shadow: 0 0 0 2px $cor-escura;
-						    	border-bottom: 3px solid $cor-texto-clara;
-						    	height: 46px;
-						    	z-index: 999;
-							}
-						}
-
 						a {
+							@include menu-claro;
+
 							color: $cor-texto-clara;
 							font: 400 16px $fonte-principal;
 							height: 46px;
-							background-color: $cor-clara;
-							transition: all 0.3s linear;
 
 							&:hover {
-								background-color: $cor-escura;
-							    box-shadow: 0 0 0 2px $cor-escura;
+								@include menu-escuro;
+
 							    border-bottom: 3px solid $cor-texto-clara;
 							    z-index: 999;
-							    transition: all 0.2s linear;
-							}
-
-							.glyphicon {
-								font-size: 14px;
 							}
 						}
+					}
 
-						> ul.dropdown-menu {
-							box-shadow: none;
-							border-radius: 0;
-							border: none;
-							background-color: $cor-clara;
-							padding: 0 2px;
+					.active {//menu ativo
+						a {
+							@include menu-escuro;
+					    	border-bottom: 3px solid $cor-texto-clara;
+					    	z-index: 999;
+						}
 
-							li {
-								background-color: $cor-clara;
-								margin-top: 3px;
+						li {
+							a {
+								@include menu-claro;
+								transition: all 0.3s linear;
 
-								a {
-									border: none;
-									padding-top: 15px;
-									font-size: 14px;
+								&:hover {
+									@include menu-escuro;
+
+									z-index: 999;
 								}
 							}
 						}
-					}//li
+					}
 
+					.dropdown-menu {
+						box-shadow: none;
+						border-radius: 0;
+						border: none;
+						background-color: $cor-clara;
+						padding: 0 2px;
+
+						li {
+							background-color: $cor-clara;
+							margin-top: 3px;
+
+							a {
+								border: none;
+								padding-top: 15px;
+								font-size: 14px;
+							}
+						}
+					}
+
+					.glyphicon {
+						font-size: 14px;
+					}
 				}//navbar-collapse
 			}//navbar
 		}//navegacao-content
@@ -300,12 +309,6 @@ footer {
 						padding-left: 15px;
 
 						li {
-							&.active {
-								a {
-									border: none;
-								}
-							}
-
 							a {
 								font-size: 14px;
 
@@ -321,6 +324,12 @@ footer {
 										padding-left: 20px;
 									}
 								}
+							}
+						}
+
+						.active {
+							a {
+								border: none;
 							}
 						}
 					}//ul.navbar-nav
