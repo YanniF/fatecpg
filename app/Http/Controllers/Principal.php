@@ -5,8 +5,8 @@ namespace FatecPG\Http\Controllers;
 use Illuminate\Http\Request;
 use FatecPG\Http\Requests;
 use Carbon\Carbon;
-use FatecPG\Noticia;
-use FatecPG\Slider;
+use FatecPG\Models\Noticia;
+use FatecPG\Models\Slider;
 
 class Principal extends Controller
 {

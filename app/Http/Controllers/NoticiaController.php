@@ -5,7 +5,7 @@ namespace FatecPG\Http\Controllers;
 use Illuminate\Http\Request;
 
 use FatecPG\Http\Requests as NR;
-use FatecPG\Noticia;
+use FatecPG\Models\Noticia;
 use Illuminate\Support\Facades\Auth;
 
 class NoticiaController extends Controller

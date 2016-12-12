@@ -28,18 +28,18 @@ class User extends Authenticatable
     ];
 
     public function noticiasCriadasPor() {
-        return $this->hasMany('FatecPG\Noticia', 'created_by');
+        return $this->hasMany('FatecPG\Models\Noticia', 'created_by');
     }
 
     public function noticiasAtualizadasPor() {
-        return $this->hasMany('FatecPG\Noticia', 'updated_by');
+        return $this->hasMany('FatecPG\Models\Noticia', 'updated_by');
     }
 
     public function sliderCriadoPor() {
-        return $this->hasMany('FatecPG\Slider', 'created_by');
+        return $this->hasMany('FatecPG\Models\Slider', 'created_by');
     }
 
     public function sliderAtualizadoPor() {
-        return $this->hasMany('FatecPG\Slider', 'updated_by');
+        return $this->hasMany('FatecPG\Models\Slider', 'updated_by');
     }
 }

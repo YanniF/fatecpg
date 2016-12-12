@@ -2,8 +2,8 @@
 
 namespace FatecPG\Policies;
 
-use FatecPG\User;
-use FatecPG\Noticia;
+use FatecPG\Models\User;
+use FatecPG\Models\Noticia;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class NoticiaPolicy

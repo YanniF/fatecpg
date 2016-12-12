@@ -1,13 +1,13 @@
 <?php
 
-namespace FatecPG;
+namespace FatecPG\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Slider extends Model
-{
-    protected $table = 'slider';
-    protected $fillable = ['imagem', 'link', 'created_by', 'updated_by'];
+class Noticia extends Model
+{	
+    protected $table = 'noticias';
+    protected $fillable = ['tituloNoticia','corpoNoticia','dataInicio','dataExpiracao', 'created_by', 'updated_by'];
 
     public function criadoPor() {
         return $this->belongsTo('FatecPG\User', 'created_by', 'id');

@@ -4,7 +4,7 @@ namespace FatecPG\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FatecPG\Http\Requests as NR;
-use FatecPG\Slider;
+use FatecPG\Models\Slider;
 use Illuminate\Support\Facades\Auth;
 
 class SliderController extends Controller
