@@ -2,7 +2,6 @@
 @section('title', 'Notícias')
 @section('content')
 
-<div class="noticias">
 	<div class="container noticias">
 		<div class="content">
 	    	<h2>Notícias</h2>
@@ -18,6 +17,5 @@
 			</div>
 		</div>
 	</div>
-</div>
 
 @stop

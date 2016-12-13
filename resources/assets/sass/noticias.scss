@@ -1,9 +1,8 @@
 //css para create, edit, index, show
 .noticias {
-	.container {
-		margin-top: 1.8em;
-		margin-bottom: 50px;
-	}
+	margin-top: 1.8em;
+	margin-bottom: 50px;
+
 	.noticias-info {
 		@include make-md-column(12);
 
@@ -15,7 +14,7 @@
 		}
 
 		.table {//index
-			margin-top: 1.8em;
+			margin-top: 1.25em;
 
 			tr {
 				cursor: pointer;
@@ -43,12 +42,19 @@
 				padding-right: 0;
 				text-align: right;
 			}
+			.glyphicon {
+				font-size: 0.85em;
+			}
 		}
 	}
 
 	//create e edit
 	> .h2 {
 		@include make-md-column(12);
+	}
+
+	.form-group {
+		margin-bottom: 1.56em;
 	}
 
 	.formulario {
@@ -78,9 +84,8 @@
 @media screen and (max-width: $resolucao-md) {
 
 	.noticias {
-		.container {
-			margin-top: 10px;
-		}
+		margin-top: 10px;
+
 		.noticias-info {
 			@include make-sm-column(12);
 
@@ -124,7 +129,6 @@
 				}
 			}
 		}
-
 		//create e edit
 		.h2 {
 			@include make-xs-column(12);
@@ -137,5 +141,5 @@
 		.formulario2 {
 			@include make-xs-column(12);
 		}
-	}//noticias
+	}
 }

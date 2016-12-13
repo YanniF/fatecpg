@@ -2,8 +2,7 @@
 @section('title', 'Notícias')
 @section('content')
 
-<div class="noticias">
-	<div class="container">
+	<div class="container noticias">
 		<div class="content">
 			<div class="noticias-info">
 				<h2>{{ $noticia->tituloNoticia }}</h2>   
@@ -49,6 +48,5 @@
             </div>
         </div>
     </div>
-</div>
 
 @endsection

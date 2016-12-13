@@ -27,6 +27,7 @@ class RouteServiceProvider extends ServiceProvider
         parent::boot();
         Route::model('noticium', \FatecPG\Models\Noticia::class);
         Route::model('slider', \FatecPG\Models\Slider::class);
+        Route::model('faq', \FatecPG\Models\Secretaria\PerguntaFrequente::class);
     }
 
     /**

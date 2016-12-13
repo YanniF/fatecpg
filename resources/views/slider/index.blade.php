@@ -2,8 +2,7 @@
 @section('title', 'Slider')
 @section('content')
 
-<div class="slider">
-	<div class="container">
+	<div class="container slider">
 		<div class="content">
 			<div class="slider-info">
 				<div class="titulo-btn">
@@ -39,6 +38,5 @@
 			</div>
 		</div>
 	</div>
-</div>
 
 @stop

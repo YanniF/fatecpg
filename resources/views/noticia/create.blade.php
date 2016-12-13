@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('title', 'Notícias')
 @section('content')
-<div class="noticias">
-	<div class="container">
+
+	<div class="container noticias">
 		<div class="content">
 	    	<h2>Notícias</h2>
 		    <div class="formulario">
@@ -17,6 +17,5 @@
 			</div>
 		</div>
 	</div>
-</div>
 	
-@stop
+@endsection

@@ -10,7 +10,7 @@
     <div class="content formulario2">	
 	    <div class="form-group">
 		  	{!! Form::label('dataInicio','Início', ['class'=>'control-label']) !!}
-		  	{!! Form::date('dataInicio',null,['class'=>'form-control', 'required']) !!}
+		  	{!! Form::date('dataInicio', \Carbon\Carbon::now(), ['class'=>'form-control', 'required']) !!}
 	    </div>		
 	    <div class="form-group">
 			{!! Form::label('dataExpiracao','Vencimento', ['class'=>'control-label']) !!}

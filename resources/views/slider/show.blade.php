@@ -2,8 +2,7 @@
 @section('title', 'Slider')
 @section('content')
 
-<div class="slider">
-	<div class="container">
+	<div class="container slider">
 		<div class="content">
 			<div class="slider-info">
 				<p class="data">Publicado em: {{ Carbon\Carbon::parse($imagem->created_at)->format('d/m/Y') }} <br>
@@ -43,6 +42,5 @@
             </div>
         </div>
     </div>
-</div>
 
 @endsection

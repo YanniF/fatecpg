@@ -1,21 +1,21 @@
 @extends('layouts.master')
-@section('title', 'Slider')
+@section('title', 'Perguntas Frequentes')
 @section('content')
 
-	<div class="container slider">
+	<div class="container faq">
 		<div class="content">				
 			<div class="formulario">
-				<h2>Slider</h2>
+				<h2>Perguntas Frequentes</h2>
 				{!! Html::ul($errors->all(), ['class'=>'alert alert-danger']) !!}
-				{!! Form::open(['url' => 'slider', 'files' => true]) !!} 
-			    	@include('partials.forms.slider')
+				{!! Form::open(['url' => 'secretaria/faq']) !!} 
+			    	@include('partials.forms.secretaria.faq')
 			    	<div class="form-group">
 			    		{!! Form::submit('Salvar',['class'=>'btn btn-primary']) !!}
-						<a class="btn btn-primary" href="{{ action('SliderController@index') }}">Cancelar</a>
+						<a class="btn btn-primary" href="">Cancelar</a>
 			    	</div>
 			  	{!! Form::close() !!}
 			</div>
 		</div>
-	</div>		
+	</div>
 
 @endsection
