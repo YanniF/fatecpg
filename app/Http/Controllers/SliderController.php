@@ -3,7 +3,7 @@
 namespace FatecPG\Http\Controllers;
 
 use Illuminate\Http\Request;
-use FatecPG\Http\Requests as NR;
+use FatecPG\Http\Requests as SR;
 use FatecPG\Models\Slider;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +22,7 @@ class SliderController extends Controller
 		return view('slider.create');
     }
 
-    public function store(NR\SliderRequest $request) {
+    public function store(SR\SliderRequest $request) {
 
     	$req = $request->all();
         
@@ -46,7 +46,7 @@ class SliderController extends Controller
         return view('slider.edit')->with('imagem', $slider);
     }
 
-    public function update(NR\SliderRequest $request, Slider $slider) {
+    public function update(SR\SliderRequest $request, Slider $slider) {
     	
         $req = $request->all();
         

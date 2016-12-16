@@ -11,7 +11,7 @@
 			    	@include('partials.forms.secretaria.faq')
 			    	<div class="form-group">
 			    		{!! Form::submit('Salvar',['class'=>'btn btn-primary']) !!}
-						<a class="btn btn-primary" href="">Cancelar</a>
+						<a class="btn btn-primary" href="{{ action('Secretaria\PerguntasFrequentesController@index') }}">Cancelar</a>
 			    	</div>
 			  	{!! Form::close() !!}
 			</div>

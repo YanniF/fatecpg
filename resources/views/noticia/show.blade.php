@@ -5,15 +5,15 @@
 	<div class="container noticias">
 		<div class="content">
 			<div class="noticias-info">
-				<h2>{{ $noticia->tituloNoticia }}</h2>   
+				<h2>{{$noticia->tituloNoticia}}</h2>   
 			</div>			 
 		</div>
 		<div class="content">
 			<div class="noticias-info">
-				<p class="data">Publicado em: {{ Carbon\Carbon::parse($noticia->dataInicio)->format('d/m/Y') }} <br>
-					Criado por: {{ $noticia->criadoPor->name }}
+				<p class="data">Publicado em: {{Carbon\Carbon::parse($noticia->dataInicio)->format('d/m/Y')}} <br>
+					Criado por: {{$noticia->criadoPor->name}}
 				</p>
-				<p>{{ $noticia->corpoNoticia }}</p>
+				<p>{{$noticia->corpoNoticia}}</p>
 			</div>
 		</div>
 		<div class="content">

@@ -1,7 +1,7 @@
 //css para create, edit, index, show
 .slider {
-	margin-top: 1.8em;
-	margin-bottom: 50px;
+	margin-top: 1.562em;
+	margin-bottom: 3.125em;
 
 	.slider-info {
 		@include make-md-column(12);
@@ -43,7 +43,11 @@
 
 	.formulario {//create
 		ul {
-			padding-left: 30px;
+			@include make-md-column(8);
+			@include make-md-column-offset(4);
+			@include make-md-column-pull(4);
+
+			padding-left: 1.875em;
 			margin-top: 0;
 		}
 	}

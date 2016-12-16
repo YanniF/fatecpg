@@ -29,8 +29,8 @@
 					<tbody>
 						@foreach($perguntas as $p)
 							<tr onclick="window.location.href = 'faq/{{$p->id}}'">
-								<td>$p->pergunta</td>
-								<td>$p->categoria</td>
+								<td>{{$p->pergunta}}</td>
+								<td>{{ucfirst($p->categoria)}}</td>
 								<td>{{ Carbon\Carbon::parse($p->created_at)->format('d/m/Y') }}</td>
 								<td>{{ $p->criadoPor->name }}</td>
 							</tr>						
