@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePerguntasFrequentesTable extends Migration
+class CreateInformativosSecretariaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePerguntasFrequentesTable extends Migration
      */
     public function up()
     {
-        Schema::create('perguntas_frequentes', function(Blueprint $table) {
+        Schema::create('informativos_secretaria', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('pergunta');
-            $table->text('resposta');
-            $table->string('categoria', 50);
+            $table->text('informacao');
+            $table->string('informacao_sobre');
+
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
 
@@ -35,6 +35,6 @@ class CreatePerguntasFrequentesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('perguntas_frequentes');
+        Schema::dropIfExists('informativos_secretaria');
     }
 }

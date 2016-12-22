@@ -10,19 +10,26 @@ body {
 }
 
 .container {
+	//palavras grandes vão se reajustar
+	overflow-wrap: break-word;//These are technically the same, but use both
+	word-wrap: break-word;
+
 	a {
 		outline: none;
 		text-decoration: none;
-
-		img {
-			border: none;
-		}
 	}
 
 	ul {
 		li {
 			list-style: square;
 		}
+	}
+
+	textarea {//não poderá redimensionar horizontalmente
+		resize: vertical;
+	}
+	.form-group {//para ter um espaçamento maior de campo pro outro (não se aplica para o modal fora container)
+		margin-bottom: 1.56em;
 	}
 }
 
@@ -52,22 +59,20 @@ body {
 	}
 }
 
-.form-group {//para ter um espaçamento maior de campo pro outro
-	margin-bottom: 1.56em;
-}
 
 #apagarModal {
 	font-weight: normal;
 
 	p {
-		margin-bottom: 25px;
+		margin-bottom: 1.5625em;
+		text-align: center;
 	}
 
 	form {
 		text-align: center;
 
 		.btn:nth-child(even) {
-			margin-left: 25px;
+			margin-left: 1.5625em;
 		}
 	}
 }

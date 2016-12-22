@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Perguntas Frequentes')
 @section('content')
-	
+		
 	<div class="container faq">
 		<div class="content">
 			<div class="faq-info">

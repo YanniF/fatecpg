@@ -3,9 +3,10 @@
 Auth::routes();
 
 Route::get('/','Principal@paginaInicial');
-
 Route::resource('noticia','NoticiaController');
 Route::resource('slider', 'SliderController');
+
+Route::get('secretaria', 'Secretaria\SecretariaController@index');
 Route::resource('secretaria/faq', 'Secretaria\PerguntasFrequentesController');
 
 Route::get('cursos/ads', function() {

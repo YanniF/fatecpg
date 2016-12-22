@@ -13,12 +13,14 @@
 			font-size: 14px;
 		}
 
-		.table {//index
+		.table-responsive {
 			margin-top: 1.25em;
+		}
+
+		.table {//index
 
 			tr {
 				cursor: pointer;
-				color: $cor-texto;
 			}
 		}
 
@@ -38,7 +40,7 @@
 			.btn-add {
 				@include make-md-column(6);
 
-				margin-top: 20px;
+				margin-top: 1.25em;
 				padding-right: 0;
 				text-align: right;
 			}
@@ -123,6 +125,7 @@
 			.titulo-btn {//index
 				h2 {
 					@include make-xs-column(6);
+					padding-left: 0;
 				}
 				.btn-add {
 					@include make-xs-column(6);

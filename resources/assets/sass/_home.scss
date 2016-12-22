@@ -1,6 +1,6 @@
 .slider-home {
 	.slider-navegacao {
-		margin: 15px 0;
+		margin: 0.9375em 0;
 
 		.item {
 			img{
@@ -17,19 +17,19 @@
 }//slider
 
 .cursos-home {
-	margin-top: 50px;
+	margin-top: 3.125em;
 
 	h2 {
 		@include make-md-column(12);
 
 		text-align: center;
-		font-size: 30px;
+		font-size: 1.875em;
 		color: $cor-titulo;
 		margin: 0 0 25px;
 	}
 
 	.cursos-itens {
-		margin-bottom: 50px;
+		margin-bottom: 3.125em;
 
 		.cursos-item {
 			@include make-md-column(3);
@@ -42,7 +42,7 @@
 				margin-bottom: 0;
 
 				a {
-					font-size: 16px;
+					font-size: 0.85em;
 					font-weight: normal;
 					color: $cor-texto;
 
@@ -56,14 +56,14 @@
 }//cursos
 
 .noticias-home {
-	margin-bottom: 50px;
+	margin-bottom: 3.125em;
 
 	h2 {
 		@include make-md-column(12);
 
 		margin: 0;
 		text-align: center;
-		font-size: 30px;
+		font-size: 1.875em;
 
 		a {
 			color: $cor-titulo;
@@ -75,7 +75,7 @@
 
 		p {
 			text-align: center;
-			font-size: 22px;
+			font-size: 1.375em;
 			color: $cor-texto;
 		}
 	}
@@ -85,7 +85,7 @@
 			@include make-md-column(2);
 
 			text-align: right;
-			margin-top: 28px;
+			margin-top: 1.75em;
 			padding-left: 0;
 			font-weight: bold;
 		}
@@ -96,8 +96,8 @@
 			padding-right: 0;
 
 			h3 {
-				margin: 25px 0 0 0;
-				font-size: 22px;
+				margin: 1.12em 0 0 0;
+				font-size: 1.375em;
 
 				a {
 					color: $cor-texto;
@@ -106,11 +106,11 @@
 
 			p {
 				text-align: justify;
-				margin: 5px 0;
+				margin: 0.3125em 0;
 			}
 
 			span {
-				font-size: 14px;
+				font-size: 0.875em;
 				color: $cor-titulo;
 
 				a:hover {
@@ -124,20 +124,20 @@
 @media screen and (max-width: $resolucao-md) {
 
 	.cursos-home {
-		margin-top: 10px;
+		margin-top: 0.625em;
 
 		h2 {
-			font-size: 20px;
-			margin-bottom: 10px;
+			font-size: 1.571em;
+			margin-bottom: 0.625em;
 		}
 
 		.cursos-itens {
-			margin-bottom: 20px;
+			margin-bottom: 1.25em;
 
 			.cursos-item {
 				@include make-sm-column(6);
-				
-				margin-bottom: 15px;
+
+				margin-bottom: 1.428em;
 
 				img {
 					margin-top: 0;
@@ -157,7 +157,7 @@
 }
 
 @media screen and (min-width: $resolucao-xs) and (max-width: $resolucao-sm) {
-	
+
 	.cursos-home {
 		.cursos-item {
 			@include make-xs-column(12);

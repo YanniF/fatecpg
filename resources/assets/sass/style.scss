@@ -1,9 +1,10 @@
 @import "plugins/bootstrap/bootstrap/variables";
 @import "plugins/bootstrap/bootstrap/mixins";
-@import "variables";
-@import "mixins";
+@import "helpers/variables";
+@import "helpers/mixins";
 @import "base";
 @import "master";
+@import "erros";
 
 @import "login_register";
 @import "home";

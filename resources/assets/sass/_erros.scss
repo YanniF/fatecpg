@@ -1,0 +1,12 @@
+.erros {
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	.titulo {
+		@include make-md-column(12);
+		
+		p {
+			font-size: 2.5em;
+		}
+	}	
+}

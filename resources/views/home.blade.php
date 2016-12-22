@@ -1,8 +1,9 @@
 @extends('layouts.master')
 @section('title', 'Página Inicial')
 @section('content')
-<!-- Slider --> 
-    <div class="container slider-home">
+
+    <!-- Slider --> 
+    <section class="container slider-home">
         <div class="content">
             <div class="slider-navegacao" class="owl-carousel">
                 @foreach($slider as $s)
@@ -10,10 +11,10 @@
                 @endforeach
             </div>
         </div>              
-    </div>
+    </section>
 
     <!-- Cursos -->
-    <div class="container cursos-home">
+    <section class="container cursos-home">
         <div class="content">
             <h2>Cursos oferecidos na Fatec PG</h2>
         </div>
@@ -35,10 +36,10 @@
                 <h3><a href="{{ url('/cursos/pq') }}">Processos Químicos</a></h3>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Notícias -->   
-    <div class="container noticias-home">
+    <section class="container noticias-home">
         <div class="content">
             <h2><a href="/noticia">Notícias</a></h2>
         </div>
@@ -75,5 +76,5 @@
                 @endforeach
             @endif    
         </div><!-- noticias-itens -->
-    </div><!-- container -->
+    </section>
 @endsection

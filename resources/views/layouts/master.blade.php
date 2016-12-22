@@ -21,27 +21,29 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <header class="container">
+    <header>
+    <div class="container">
         <div class="content">
-            <div class="logoFatec">
-                <h1 class="hidden">Fatec PG</h1>
-                <a href="/">
-                    <img src="{{ asset('img/logoFatec.png') }}" class="img-responsive" alt="Fatec PG" title="Fatec PG">
-                </a>                
+                <div class="logoFatec">
+                    <h1 class="hidden">Fatec PG</h1>
+                    <a href="/">
+                        <img src="{{ asset('img/logoFatec.png') }}" class="img-responsive" alt="Fatec PG" title="Fatec PG">
+                    </a>                
+                </div>
+                <div class="logoCPS">
+                    <h1 class="hidden">Centro Paula Souza</h1>
+                    <a href="http://www.cps.sp.gov.br/" target="_blank">
+                        <img src="{{ asset('img/logoCPS.png') }}" class="img-responsive" alt="Centro Paula Souza" title="Centro Paula Souza">
+                    </a>
+                </div>
+                <div class="logoGoverno">
+                    <h1 class="hidden">Governo do Estado de São Paulo</h1>
+                    <a href="http://www.saopaulo.sp.gov.br/" target="_blank">
+                        <img src="{{ asset('img/logoGoverno.png') }}" class="img-responsive" alt="Governo do Estado de São Paulo" title="Governo do Estado de São Paulo">
+                    </a>
+                </div>      
             </div>
-            <div class="logoCPS">
-                <h1 class="hidden">Centro Paula Souza</h1>
-                <a href="http://www.cps.sp.gov.br/" target="_blank">
-                    <img src="{{ asset('img/logoCPS.png') }}" class="img-responsive" alt="Centro Paula Souza" title="Centro Paula Souza">
-                </a>
-            </div>
-            <div class="logoGoverno">
-                <h1 class="hidden">Governo do Estado de São Paulo</h1>
-                <a href="http://www.saopaulo.sp.gov.br/" target="_blank">
-                    <img src="{{ asset('img/logoGoverno.png') }}" class="img-responsive" alt="Governo do Estado de São Paulo" title="Governo do Estado de São Paulo">
-                </a>
-            </div>      
-        </div>
+        </div>            
     </header>
 
     <!-- Menu -->
@@ -89,7 +91,7 @@
                                         <li><a href="#">Coordenação</a></li>
                                         <li><a href="#">Direção</a></li>
                                         <li><a href="http://www.fatecpg.com.br/tic/default.aspx">DTI</a></li>
-                                        <li><a href="http://www.fatecpg.com.br/fatec/pages/Secretaria.aspx">Secretaria</a></li>
+                                        <li><a href="{{action('Secretaria\SecretariaController@index')}}">Secretaria</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -170,7 +172,7 @@
             </div><!--modal-content-->
         </div>
     </div>   
-
+       
     @yield('content')
 
     <!-- Rodapé -->
@@ -216,7 +218,7 @@
                         <li><a href="#">Coordenação</a></li>
                         <li><a href="#">Direção</a></li>
                         <li><a href="#">DTI</a></li>
-                        <li><a href="#">Secretaria</a></li>
+                        <li><a href="{{action('Secretaria\SecretariaController@index')}}">Secretaria</a></li>
                     </ul>
                 </div>
                 <div class="maps">

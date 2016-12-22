@@ -1,18 +1,29 @@
-// html {
-//   position: relative;
-//   min-height: 100%;
-// }
-// body {
-//   margin-bottom: 440px;
-// }
+//sticky
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.container {
+	flex: 1;
+}
+//footer
+
+//o sticky footer com flexbox não funcionou para IE
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	body {
+		display: block;
+	}
+}
 
 header {
-	padding: 15px 0;
+	padding: 0.9375em 0;
 
 	.content {
 		margin-left: 0;
 		margin-right: 0;
-		margin-top: 5px;
+		margin-top: 0.3125em;
 
 		height: 80px;
 
@@ -35,7 +46,7 @@ header {
 
 			padding-right: 0;
 
-			> img {
+			img {
 				padding: 5px 0 0 25px;
 			}
 		}
@@ -87,7 +98,7 @@ header {
 							@include menu-claro;
 
 							color: $cor-texto-clara;
-							font: 400 16px $fonte-principal;
+							font-weight: 400;
 							height: 46px;
 
 							&:hover {
@@ -109,7 +120,6 @@ header {
 						li {
 							a {
 								@include menu-claro;
-								transition: all 0.3s linear;
 
 								&:hover {
 									@include menu-escuro;
@@ -134,13 +144,14 @@ header {
 							a {
 								border: none;
 								padding-top: 15px;
-								font-size: 14px;
+								font-size: 1em;
+								transition: all 0.2s linear;
 							}
 						}
 					}
 
 					.glyphicon {
-						font-size: 14px;
+						font-size: 1em;
 					}
 				}//navbar-collapse
 			}//navbar
@@ -151,7 +162,7 @@ header {
 .modal {
 	.modal-header {
 		text-align: center;
-		font-size: 18px;
+		font-size: 1.125em;
 	}
 
 	.control-label {
@@ -171,16 +182,16 @@ header {
 
 footer {
 	background-color: $cor-escura;
-	width: 100%;
-	// position: absolute;
-	// bottom: 0;
-	// width: 100%;
-	// height: 370px;
+
+	// .container {//arrumar
+	// 	word-wrap: normal;
+	// 	overflow-wrap: visible;
+	// }
 
 	.content {
-		margin-top: 25px;
-		margin-bottom: 25px;
-		font-size: 14px;
+		margin-top: 1.5625em;
+		margin-bottom: 1.5625em;
+		font-size: 0.875em;
 		font-weight: 300;
 		color: $cor-texto-clara;
 
@@ -221,6 +232,10 @@ footer {
 			@include make-md-column(2);
 		}
 
+		.departamentos {
+			padding-right: 0;
+		}
+
 		.maps {
 			@include make-md-column(4);
 			@include make-md-column-offset(1);
@@ -230,7 +245,7 @@ footer {
 			margin: 0;
 
 			a {
-				font-size: 18px;
+				font-size: 1.285em;
 			}
 		}
 
@@ -245,7 +260,7 @@ footer {
 		.desenvolvido {
 			@include make-md-column(12);
 
-			margin: 10px;
+			margin: 0.714em;
 			text-align: center;
 		}
 	}
@@ -298,6 +313,7 @@ footer {
 			.mapa_dar_nome,
 			.departamentos {
 				@include make-sm-column(2);
+				padding: 0;
 			}
 			.maps {
 				@include make-sm-column(5);
@@ -305,7 +321,7 @@ footer {
 
 			h4 {
 				a {
-					font-size: 14px;
+					font-size: 1em;
 				}
 			}
 		}
@@ -323,7 +339,7 @@ footer {
 
 						li {
 							a {
-								font-size: 14px;
+								font-size: 1em;
 
 								&:hover {
 									border: none;
@@ -333,7 +349,7 @@ footer {
 							ul.dropdown-menu {
 								li {
 									a {
-										font-size: 12px;
+										font-size: 0.8571em;
 										padding-left: 20px;
 									}
 								}
