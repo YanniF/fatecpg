@@ -22,3 +22,10 @@ $(window).scroll(function() {
     }
 });
 
+//esconder menu lateral
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    
+    $(".sidebar").toggleClass("toggled-menu");
+    $(".conteudo-toggle").toggleClass("toggled-conteudo");
+});
