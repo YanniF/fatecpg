@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="DTI Fatec Praia Grande">
+    
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Fatec PG - @yield('title')</title>
 
@@ -19,6 +21,12 @@
     <link rel="stylesheet" href="{{ asset('css/plugins/owl-carousel/owl.theme.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/plugins/owl-carousel/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 </head>
 <body>
     <header>
