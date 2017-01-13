@@ -1,13 +1,13 @@
 //sticky
-body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-}
+// body {
+// 	display: flex;
+// 	min-height: 100vh;
+// 	flex-direction: column;
+// }
 
-.container {
-	flex: 1;
-}
+// .container {
+// 	flex: 1;
+// }
 //footer
 
 //o sticky footer com flexbox não funcionou para IE
@@ -108,6 +108,10 @@ header {
 							    z-index: 999;
 							}
 						}
+
+						span {
+
+						}
 					}
 
 					.active {//menu ativo
@@ -151,7 +155,7 @@ header {
 					}
 
 					.glyphicon {
-						font-size: 1em;
+						font-size: 0.875em;
 					}
 				}//navbar-collapse
 			}//navbar
@@ -182,11 +186,6 @@ header {
 
 footer {
 	background-color: $cor-escura;
-
-	// .container {//arrumar
-	// 	word-wrap: normal;
-	// 	overflow-wrap: visible;
-	// }
 
 	.content {
 		margin-top: 1.5625em;

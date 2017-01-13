@@ -3,20 +3,22 @@
 @section('content')
 	
 	<div class="container secretaria">
-	
 		<div class="content">
 			<aside class="sidebar">
-	        	<ul class="sidebar-nav">              
+	        	<ul class="sidebar-nav">            
 	                <li><a href="#">Regulamentos</a></li>
 	                <li><a href="#">Formandos</a></li>
 	                <li><a href="#">Exame de proficiência</a></li>
 	                <li><a href="#">Requerimentos</a></li>
 	                <li><a href="#">Equipe</a></li>
-	            </ul>      
+	            </ul>	            
 	        </aside>
-			
+
+	        <div class="menu-toggle">
+		        <span class="glyphicon glyphicon-chevron-left"></span>
+		    </div>
+
 			<div class="conteudo-toggle">
-			 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
 	            <div class="informativo">
 	            	<div class="titulo-btn">
 		            	@if(!Auth::guest())

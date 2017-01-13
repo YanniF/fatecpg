@@ -23,9 +23,44 @@ $(window).scroll(function() {
 });
 
 //esconder menu lateral
-$("#menu-toggle").click(function(e) {
+$(".menu-toggle").click(function(e) {
     e.preventDefault();
     
+    var menu = ".menu-toggle span";
+    var right = "glyphicon-chevron-right";
+    var left = "glyphicon-chevron-left";
+
+
+    if($(menu).hasClass(left)) {
+        $(menu).removeClass(left).addClass(right);
+    }
+    else {
+        $(menu).removeClass(right).addClass(left);
+    }
+
     $(".sidebar").toggleClass("toggled-menu");
     $(".conteudo-toggle").toggleClass("toggled-conteudo");
 });
+
+//esconde o menu quando a resolução da tela for menor que 768
+function mobileViewUpdate () {
+    var largura = $(window).width();
+    var menu = ".menu-toggle span";
+    var right = "glyphicon-chevron-right";
+    var left = "glyphicon-chevron-left";
+
+    if (largura < 768) {
+        $(".sidebar").addClass("toggled-menu");
+        $(".conteudo-toggle").addClass("toggled-conteudo");
+        $(menu).removeClass(left).addClass(right);
+    }
+
+    else {
+        $(".sidebar").removeClass("toggled-menu");
+        $(".conteudo-toggle").removeClass("toggled-conteudo");        
+        $(menu).removeClass(right).addClass(left);
+    }
+}
+
+$(window).load(mobileViewUpdate);
+$(window).resize(mobileViewUpdate);

@@ -92,7 +92,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="http://www.fatecpg.com.br/estagio/default.aspx">Estágio</a></li>
-                                <li class="dropdown {{ (Request::is('departamentos/*') ? 'active' : '') }}">
+                                <li class="dropdown {{ (Request::is('secretaria') ? 'active' : '') }}">
                                     <a href="http://www.fatecpg.com.br/estagio/default.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="http://www.biblioceeteps.com.br/">Biblioteca</a></li>
