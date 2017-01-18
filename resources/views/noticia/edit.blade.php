@@ -19,3 +19,7 @@
 	</div>
 
 @stop
+
+@section('tinymce')
+	@include('partials.tinymce')
+@endsection

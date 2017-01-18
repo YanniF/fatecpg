@@ -19,3 +19,9 @@
 	</div>
 	
 @endsection
+
+{{-- adicionar somente para as textareas que vão permitir formatação
+     e retirar required da textarea --}}
+@section('tinymce')
+	@include('partials.tinymce')
+@endsection

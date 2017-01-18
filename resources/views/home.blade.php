@@ -63,8 +63,8 @@
                                     $textoMenor = substr($n->corpoNoticia, 0, 600);//cortando texto                                
                                     $n->corpoNoticia = substr($textoMenor, 0, strrpos($textoMenor, ' ')) . '...'; //corta ao término da palavra
                                 }
-                            ?>                        
-                            <p>{{($n->corpoNoticia)}}</p>
+                            ?>
+                            <p>{!! ($n->corpoNoticia) !!}</p>
                             
                             <?php
                                 if($grande)  {   

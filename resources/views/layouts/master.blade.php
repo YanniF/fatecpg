@@ -243,7 +243,8 @@
     
     <script src="{{ asset('js/plugins/jquery/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ asset('js/plugins/bootstrap/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/owl-carousel/owl.carousel.min.js') }}"></script>    
+    <script src="{{ asset('js/plugins/owl-carousel/owl.carousel.min.js') }}"></script>
+    @yield('tinymce')  
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
