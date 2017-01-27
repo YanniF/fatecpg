@@ -10,7 +10,8 @@
 			  	{!! Form::open(['url' => 'noticia']) !!}
 			    	@include('partials.forms.noticia')
 			    	<div class="form-group">
-			    		{!! Form::submit('Salvar',['class'=>'btn btn-primary']) !!}
+			    		{{-- {!! Form::button('<span class="glyphicon glyphicon-floppy-disk"></span> Salvar', array('class'=>'btn btn-primary', 'type'=>'submit')) !!} --}}
+			    		{!! Form::submit('Salvar',['class'=>'btn btn-primary']) !!}	
 						<a class="btn btn-primary" href="{{ action('NoticiaController@index') }}">Cancelar</a>
 			    	</div>				
 			  	{!! Form::close() !!}

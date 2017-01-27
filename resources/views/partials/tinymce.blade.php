@@ -3,6 +3,9 @@
     tinymce.init({
     	force_p_newlines: false,
     	forced_root_block: "",
-        selector: 'textarea'
+        selector: 'textarea',
+        menubar: false,
+        toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright bullist numlist outdent indent link',
+        plugins: 'lists advlist'
     });
 </script>
